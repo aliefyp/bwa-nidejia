@@ -26,33 +26,54 @@
     <style type="text/tailwindcss">
       @layer component {
         .container {
-          @apply max-w-screen-lg mx-auto px-[30px];
+          @apply max-w-screen-lg mx-auto px-[16px];
         }
       }
     </style>
   </head>
   <body class="bg-black text-white font-['Poppins']">
-
-    <header class="fixed top-[30px] left-[50%] -translate-x-1/2 w-full z-10 transition-all">
+    <header class="fixed top-[30px] left-[50%] -translate-x-1/2 w-full z-20 transition-all">
       <div class="container">
         <nav class="navbar w-full rounded-[20px] bg-dark text-white px-[30px] py-[24px] flex justify-between items-center">
           <div class="flex items-center gap-[10px] font-extrabold text-[24px]">
             <img src="./logo-main.svg" alt="Nidejia Logo" aria-label="Nidejia Logo" height="36" />
             <span>Nidejia</span>
           </div>
-          <ul class="flex items-center gap-[30px]">
+          <ul class="hidden lg:flex items-center gap-[30px]">
             <li class="font-semibold hover:underline"><a href="#">Featured</a></li>
             <li class="font-semibold hover:underline"><a href="#">Categories</a></li>
             <li class="font-semibold hover:underline"><a href="#">Testimonials</a></li>
             <li class="font-semibold hover:underline"><a href="#">About</a></li>
           </ul>
-          <div class="flex items-center gap-[12px]">
+          <div class="hidden lg:flex items-center gap-[12px]">
             <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Sign In</button>
             <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">Sign Up</button>
           </div>
+          <button class="hamburger-menu lg:hidden">
+            <div class="flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all !ring-0 outline-none ring-gray-300 hover:ring-8 focus:ring-4 ring-opacity-30 duration-200">
+              <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
+                <span class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"></span>
+                <span class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300"></span>
+                <span class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"></span>
+              </div>
+            </div>
+          </button>
         </nav>
       </div>
     </header>
+
+    <aside class="drawer-menu opacity-0 lg:hidden z-10 fixed top-0 right-0 w-screen bg-dark bg-opacity-0 flex items-center justify-center transition-all -translate-y-[100%] pt-[180px] pb-[50px]">
+      <ul class="flex flex-col items-center gap-[30px]">
+        <li class="font-semibold hover:underline"><a href="#">Featured</a></li>
+        <li class="font-semibold hover:underline"><a href="#">Categories</a></li>
+        <li class="font-semibold hover:underline"><a href="#">Testimonials</a></li>
+        <li class="font-semibold hover:underline"><a href="#">About</a></li>
+        <div class="flex items-center gap-[12px]">
+          <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Sign In</button>
+          <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">Sign Up</button>
+        </div>
+      </ul>
+    </aside>
 
     <main>
       <!-- Section Hero -->
@@ -69,14 +90,14 @@
                 </p>
                 <form>
                   <div class="rounded-full overflow-hidden w-full flex items-center bg-dark h-[70px] mt-[50px]">
-                      <input
-                        type="search"
-                        name="city"
-                        autocomplete="off"
-                        placeholder="Search by city or country..."
-                        class="text-[20px] bg-transparent w-full text-white outline-none px-[30px] grow [&::-webkit-search-cancel-button]:hidden"
-                      />
-                    <button type="submit" class="font-semibold text-dark bg-brand px-[40px] h-full shrink-0 hover:bg-opacity-80">
+                    <input
+                      type="search"
+                      name="city"
+                      autocomplete="off"
+                      placeholder="Search by city or country..."
+                      class="text-[20px] bg-transparent w-full text-white outline-none px-[30px] grow [&::-webkit-search-cancel-button]:hidden"
+                    />
+                    <button type="submit" class="font-semibold text-dark bg-brand px-[20px] md:px-[40px] h-full shrink-0 hover:bg-opacity-80">
                       Explore Now
                     </button>
                   </div>
@@ -90,44 +111,16 @@
       <!-- Section Statistics -->
       <section>
         <div class="container relative pt-0">
-          <div class="bg-dark grid grid-cols-4 rounded-[20px] translate-y-[-75px] w-full">
-            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
-              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
+          <div class="stats-list bg-dark grid grid-cols-2 lg:grid-cols-4 rounded-[20px] translate-y-[-75px] w-full">
+            <div class="stats-item flex items-center gap-[16px] px-[24px] lg:px-[50px] my-[30px] lg:border-r border-[#353535] last:border-none odd:border-r">
+              <div class="bg-brand w-[40px] lg:w-[70px] h-[40px] lg:h-[70px] shrink-0 rounded-full flex items-center justify-center">
                 <img src="./icon-stats-1.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
               </div>
               <div>
-                <h3 class="text-white font-extrabold text-[28px]">382M</h3>
-                <span class="text-steel">Kos Available</span>
+                <h3 class="text-white font-extrabold text-[20px] lg:text-[28px]">382M</h3>
+                <span class="text-steel text-[12px] lg:text-[16px]">Kos Available</span>
               </div>
             </div>
-            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
-              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
-                <img src="./icon-stats-2.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
-              </div>
-              <div>
-                <h3 class="text-white font-extrabold text-[28px]">9/10</h3>
-                <span class="text-steel">People Happy</span>
-              </div>
-            </div>
-            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
-              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
-                <img src="./icon-stats-3.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
-              </div>
-              <div>
-                <h3 class="text-white font-extrabold text-[28px]">100%</h3>
-                <span class="text-steel">High Security</span>
-              </div>
-            </div>
-            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
-              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
-                <img src="./icon-stats-4.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
-              </div>
-              <div>
-                <h3 class="text-white font-extrabold text-[28px]">183</h3>
-                <span class="text-steel">Countries</span>
-              </div>
-            </div>
-  
           </div>
         </div>
       </section>
@@ -139,122 +132,32 @@
             <h2 class="text-white text-[28px] font-bold">Our Latest Deals</h2>
             <p class="text-steel">Explore the beauty of architecture and living love</p>
           </div>
-          <div class="grid grid-cols-2 lg:grid-cols-4 mt-[30px] gap-[30px]">
-            <a href="#">
-              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-1.jpg)] bg-cover relative group">
+          <div class="deal-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-[30px] gap-[16px] sm:gap-[30px]">
+            <a class="deal-item" href="#">
+              <div class="deal-wrapper rounded-[24px] h-[200px] sm:h-[350px] bg-[url(./image-deals-1.jpg)] bg-cover bg-center relative group">
                 <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
                   <div class="flex items-center justify-between">
                     <div>
-                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">De Flecce</h4>
-                      <span><strong>$47,298</strong>/mo</span>
+                      <h4 class="deal-name text-[20px] text-ellipsis overflow-hidden font-bold">De Flecce</h4>
+                      <span><strong class="deal-price">$47,298</strong>/mo</span>
                     </div>
                     <div class="flex gap-[2px]">
                       <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                      <span>4.5/5</span>
+                      <span class="deal-rating">4.5/5</span>
                     </div>
                   </div>
                   <div class="flex items-center justify-between">
                     <div class="flex items-center gap-[2px] mt-[14px]">
                       <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>529 sqft</span>
+                      <span class="deal-area">529 sqft</span>
                     </div>
                     <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>3</span>
+                      <img src="./icon-users.svg" alt="Capacity" aria-label="Capacity" width="18" height="18" />
+                      <span class="deal-capacity">3</span>
                     </div>
                     <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>10gb</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-2.jpg)] bg-cover relative group">
-                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">Party Every</h4>
-                      <span><strong>$18,983</strong>/mo</span>
-                    </div>
-                    <div class="flex gap-[2px]">
-                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                      <span>4.5/5</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>529 sqft</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>3</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>10gb</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-3.jpg)] bg-cover relative group">
-                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">Brown Hall</h4>
-                      <span><strong>$84,209</strong>/mo</span>
-                    </div>
-                    <div class="flex gap-[2px]">
-                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                      <span>4.5/5</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>529 sqft</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>3</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>10gb</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </a>
-            <a href="#">
-              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-4.jpg)] bg-cover relative group">
-                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">Mini Max</h4>
-                      <span><strong>$14,221</strong>/mo</span>
-                    </div>
-                    <div class="flex gap-[2px]">
-                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                      <span>4.5/5</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>529 sqft</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>3</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span>10gb</span>
+                      <img src="./icon-wifi.svg" alt="Wifi" aria-label="Wifi" width="18" height="18" />
+                      <span class="deal-wifi">10gb</span>
                     </div>
                   </div>
                 </div>
@@ -275,82 +178,12 @@
             <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Explore All</button>
           </div>
 
-          <div class="grid grid-cols-2 lg:grid-cols-4 gap-[30px]">
-            <a href="#">
+          <div class="cat-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-[30px]">
+            <a class="cat-item" href="#">
               <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
                 <img src="./icon-cat-1.svg" alt="Star Hills Icon" aria-label="Star Hills Icon" width="32" height="32" class="shrink-0" />
                 <div class="grow">
                   <h4 class="text-white text-[20px] font-bold">Star Hills</h4>
-                  <span class="text-steel">18,394</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-2.svg" alt="Apartment Icon" aria-label="Apartment Icon" width="32" height="32" class="shrink-0" />
-                <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Apartment</h4>
-                  <span class="text-steel">18,394</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-3.svg" alt="Nearby City Icon" aria-label="Nearby City Icon" width="32" height="32" class="shrink-0" />
-                <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Nearby City</h4>
-                  <span class="text-steel">18,394</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-4.svg" alt="Landed House Icon" aria-label="Landed House Icon" width="32" height="32" class="shrink-0" />
-                <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Landed House</h4>
-                  <span class="text-steel">18,394</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-5.svg" alt="Airport Icon" aria-label="Airport Icon" width="32" height="32" class="shrink-0" />
-                <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Airport</h4>
-                  <span class="text-steel">18,394</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-6.svg" alt="Awards Icon" aria-label="Awards Icon" width="32" height="32" class="shrink-0" />
-                <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Awards</h4>
-                  <span class="text-steel">18,394</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-7.svg" alt="Sunset Icon" aria-label="Sunset Icon" width="32" height="32" class="shrink-0" />
-                <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Sunset</h4>
-                  <span class="text-steel">18,394</span>
-                </div>
-              </div>
-            </a>
-
-            <a href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-8.svg" alt="Others Icon" aria-label="Others Icon" width="32" height="32" class="shrink-0" />
-                <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Others</h4>
                   <span class="text-steel">18,394</span>
                 </div>
               </div>
@@ -362,8 +195,8 @@
       <!-- Section Benefits -->
       <section>
         <div class="container py-[100px]">
-          <div class="grid grid-cols-12 gap-[50px]">
-            <div class="col-span-12 lg:col-span-5 space-y-[30px]">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-[50px]">
+            <div class="col-span-1 lg:col-span-5 space-y-[30px]">
               <h2 class="text-white text-[28px] font-bold">Huge Benefits That<br />Make You Feel Happier</h2>
               <ul class="space-y-[24px]">
                 <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">Checking faster without depositing</li>
@@ -382,57 +215,13 @@
                 <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">All Benefits</button>
               </div>
             </div>
-            <div class="col-span-12 lg:col-span-7">
-              <div class="grid grid-cols-2 gap-[30px]">
-
-                <!-- "House for Office and Living", "House Nearby with Mall", "House Historical Building", "Landed House with Park" -->
-                <a href="#">      
-                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-1.jpg)] bg-cover relative group">
+            <div class="col-span-1 lg:col-span-7">
+              <div class="benefit-list grid grid-cols-1 md:grid-cols-2 gap-[30px]">
+                <a class="benefit-item" href="#">      
+                  <div class="benefit-wrapper rounded-[24px] h-[200px] bg-[url(./image-ben-1.jpg)] bg-cover relative group">
                     <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
                       <div class="flex items-center justify-between gap-[16px]">
                         <h4 class="text-[20px] font-bold grow">House for Office and Living</h4>
-                        <div class="flex gap-[2px] shrink-0">
-                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                          <span>18,309</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-2.jpg)] bg-cover relative group">
-                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
-                      <div class="flex items-center justify-between gap-[16px]">
-                        <h4 class="text-[20px] font-bold grow">House Nearby with Mall</h4>
-                        <div class="flex gap-[2px] shrink-0">
-                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                          <span>18,309</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-3.jpg)] bg-cover relative group">
-                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
-                      <div class="flex items-center justify-between gap-[16px]">
-                        <h4 class="text-[20px] font-bold grow">House Historical Building</h4>
-                        <div class="flex gap-[2px] shrink-0">
-                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                          <span>18,309</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </a>
-
-                <a href="#">
-                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-4.jpg)] bg-cover relative group">
-                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
-                      <div class="flex items-center justify-between gap-[16px]">
-                        <h4 class="text-[20px] font-bold grow">Landed House with Park</h4>
                         <div class="flex gap-[2px] shrink-0">
                           <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
                           <span>18,309</span>
@@ -454,7 +243,7 @@
             <h2 class="text-white text-[28px] font-bold">Happy Customers</h2>
             <p class="text-steel">We’d love to come back again soon</p>
           </div>
-          <ul class="testi-list columns-2 md:columns-3 gap-[30px] space-y-[30px] mt-[30px]">
+          <ul class="testi-list columns-1 sm:column-2 lg:columns-3 gap-[16px] sm:gap-[30px] space-y-[16px] sm:space-y-[30px] mt-[30px]">
             <li class="testi-card bg-dark2 rounded-[20px] px-[20px] py-[16px] space-y-[20px] break-inside-avoid-column">
               <div class="flex items-center">
                 <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
@@ -577,14 +366,10 @@
 
         window.addEventListener('scroll', () => {
           if (window.scrollY > 0) {
-            navbar.classList.add('backdrop-blur-md');
-            navbar.classList.add('bg-opacity-60');
-            navbar.classList.add('shadow-lg');
+            navbar.classList.add('backdrop-blur-md', 'bg-opacity-60', 'shadow-lg', '!py-[12px]');
             header.classList.add('top-[10px]');
           } else {
-            navbar.classList.remove('backdrop-blur-md');
-            navbar.classList.remove('bg-opacity-60');
-            navbar.classList.remove('shadow-lg');
+            navbar.classList.remove('backdrop-blur-md', 'bg-opacity-60', 'shadow-lg', '!py-[12px]');
             header.classList.remove('top-[10px]');
           }
         });
@@ -599,14 +384,133 @@
           langIcon.classList.toggle('rotate-180');
         });
 
+        // hamburger menu
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const drawerMenu = document.querySelector('.drawer-menu');
+        hamburgerMenu.addEventListener('click', () => {
+          hamburgerMenu.querySelectorAll('span').forEach((line, index) => {
+            if (index === 0) line.classList.toggle('rotate-[42deg]');
+            if (index === 1) line.classList.toggle('-translate-x-10');
+            if (index === 2) line.classList.toggle('-rotate-[42deg]');
+          });
+          drawerMenu.classList.toggle('translate-y-0');
+          drawerMenu.classList.toggle('bg-opacity-[95%]');
+          drawerMenu.classList.toggle('opacity-100');
+          document.body.classList.toggle('overflow-hidden');
+        })
+
+
+        // handle outside click
         window.addEventListener('click', (e) => {
           if (!langWrapper.contains(e.target)) {
             langDropdown.classList.add('h-0');
             langDropdown.classList.add('opacity-0');
             langIcon.classList.remove('rotate-180');
           }
+
+          if (!hamburgerMenu.contains(e.target) && !drawerMenu.contains(e.target)) {
+            hamburgerMenu.classList.remove('ring-4');
+            hamburgerMenu.querySelectorAll('span').forEach((line, index) => {
+              if (index === 0) line.classList.remove('rotate-[42deg]');
+              if (index === 1) line.classList.remove('-translate-x-10');
+              if (index === 2) line.classList.remove('-rotate-[42deg]');
+            });
+            drawerMenu.classList.remove('translate-y-0');
+            drawerMenu.classList.toggle('bg-opacity-[95%]');
+            drawerMenu.classList.remove('opacity-100');
+            document.body.classList.remove('overflow-hidden');
+          }
         });
 
+        // handle stats data
+        (function () {
+          const dummyStats = [
+            { id: 1, icon: './icon-stats-1.svg', title: '382M', desc: 'Kos Available' },
+            { id: 2, icon: './icon-stats-2.svg', title: '9/10', desc: 'People Happy' },
+            { id: 3, icon: './icon-stats-3.svg', title: '100%', desc: 'High Security' },
+            { id: 4, icon: './icon-stats-4.svg', title: '183', desc: 'Countries' },
+          ]
+
+          const statsList = document.querySelector('.stats-list');
+          const statsItem = document.querySelector('.stats-item');
+          dummyStats.forEach((stat, index) => {
+            const newStatsItem = index !== 0 ? statsItem.cloneNode(true) : statsItem;
+            newStatsItem.querySelector('img').src = stat.icon;
+            newStatsItem.querySelector('h3').textContent = stat.title;
+            newStatsItem.querySelector('span').textContent = stat.desc;
+            statsList.appendChild(newStatsItem);
+          });
+        })();
+
+        // handle latest deals data
+        (function () {
+          const dummyDeals = [
+            { id: 1, image: './image-deals-1.jpg', title: 'De Flecce', price: '$47,298', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
+            { id: 2, image: './image-deals-2.jpg', title: 'Party Every', price: '$18,983', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
+            { id: 3, image: './image-deals-3.jpg', title: 'Brown Hall', price: '$84,209', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
+            { id: 4, image: './image-deals-4.jpg', title: 'Mini Max', price: '$14,221', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
+          ]
+
+          const dealList = document.querySelector('.deal-list');
+          const dealItem = document.querySelector('.deal-item');
+          dummyDeals.forEach((deal, index) => {
+            const newDealItem = index !== 0 ? dealItem.cloneNode(true) : dealItem;
+            newDealItem.querySelector('.deal-wrapper').style.backgroundImage = `url(${deal.image})`;
+            newDealItem.querySelector('.deal-name').textContent = deal.title;
+            newDealItem.querySelector('.deal-price').textContent = deal.price;
+            newDealItem.querySelector('.deal-rating').textContent = deal.rating;
+            newDealItem.querySelector('.deal-area').textContent = deal.area;
+            newDealItem.querySelector('.deal-capacity').textContent = deal.capacity;
+            newDealItem.querySelector('.deal-wifi').textContent = deal.wifi;
+            dealList.appendChild(newDealItem);
+          });
+        })();
+
+        // handle categories data
+        (function () {
+          const dummyCategories = [
+            { id: 1, icon: './icon-cat-1.svg', title: 'Star Hills', total: '18,394' },
+            { id: 2, icon: './icon-cat-2.svg', title: 'Apartment', total: '18,394' },
+            { id: 3, icon: './icon-cat-3.svg', title: 'Nearby City', total: '18,394' },
+            { id: 4, icon: './icon-cat-4.svg', title: 'Landed House', total: '18,394' },
+            { id: 5, icon: './icon-cat-5.svg', title: 'Airport', total: '18,394' },
+            { id: 6, icon: './icon-cat-6.svg', title: 'Awards', total: '18,394' },
+            { id: 7, icon: './icon-cat-7.svg', title: 'Sunset', total: '18,394' },
+            { id: 8, icon: './icon-cat-8.svg', title: 'Others', total: '18,394' },
+          ]
+
+          const catList = document.querySelector('.cat-list');
+          const catItem = document.querySelector('.cat-item');
+          dummyCategories.forEach((cat, index) => {
+            const newCatItem = index !== 0 ? catItem.cloneNode(true) : catItem;
+            newCatItem.querySelector('img').src = cat.icon;
+            newCatItem.querySelector('h4').textContent = cat.title;
+            newCatItem.querySelector('span').textContent = cat.total;
+            catList.appendChild(newCatItem);
+          });
+        })();
+
+        // handle benefits data
+        (function () {
+          const dummyBenefits = [
+            { id: 1, image: './image-ben-1.jpg', title: 'House for Office and Living', count: '18,309' },
+            { id: 2, image: './image-ben-2.jpg', title: 'House Nearby with Mall', count: '18,309' },
+            { id: 3, image: './image-ben-3.jpg', title: 'House Historical Building', count: '18,309' },
+            { id: 4, image: './image-ben-4.jpg', title: 'Landed House with Park', count: '18,309' },
+          ]
+
+          const benefitList = document.querySelector('.benefit-list');
+          const benefitItem = document.querySelector('.benefit-item');
+          dummyBenefits.forEach((benefit, index) => {
+            const newBenefitItem = index !== 0 ? benefitItem.cloneNode(true) : benefitItem;
+            newBenefitItem.querySelector('.benefit-wrapper').style.backgroundImage = `url(${benefit.image})`;
+            newBenefitItem.querySelector('h4').textContent = benefit.title;
+            newBenefitItem.querySelector('span').textContent = benefit.count;
+            benefitList.appendChild(newBenefitItem);
+          });
+        })();
+
+        // handle testimonials data
         (function () {
           const dummyTestimonials = [
             "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
