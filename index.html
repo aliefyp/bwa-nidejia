@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Nidejia - Glorious Living and Loving Space</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brand: '#FF9357',
+              secondary: '#323437',
+              dark: '#141414',
+              dark2: '#202020',
+              steel: '#A8A8AB',
+            }
+          }
+        }
+      }
+    </script>
+    <style type="text/tailwindcss">
+      @layer component {
+        .container {
+          @apply max-w-screen-lg mx-auto px-[30px];
+        }
+      }
+    </style>
+  </head>
+  <body class="bg-black text-white font-['Poppins']">
+
+    <header class="fixed top-[30px] left-[50%] -translate-x-1/2 w-full z-10 transition-all">
+      <div class="container">
+        <nav class="navbar w-full rounded-[20px] bg-dark text-white px-[30px] py-[24px] flex justify-between items-center">
+          <div class="flex items-center gap-[10px] font-extrabold text-[24px]">
+            <img src="./logo-main.svg" alt="Nidejia Logo" aria-label="Nidejia Logo" height="36" />
+            <span>Nidejia</span>
+          </div>
+          <ul class="flex items-center gap-[30px]">
+            <li class="font-semibold hover:underline"><a href="#">Featured</a></li>
+            <li class="font-semibold hover:underline"><a href="#">Categories</a></li>
+            <li class="font-semibold hover:underline"><a href="#">Testimonials</a></li>
+            <li class="font-semibold hover:underline"><a href="#">About</a></li>
+          </ul>
+          <div class="flex items-center gap-[12px]">
+            <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Sign In</button>
+            <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">Sign Up</button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- Section Hero -->
+      <section>
+        <div class="bg-[url('./hero-bg.jpg')] bg-center bg-cover">
+          <div class="bg-gradient-to-r from-black to-transparent">
+            <div class="container pt-[200px] pb-[200px]">
+              <div class="max-w-xl">
+                <h1 class="text-white text-[55px] font-extrabold">
+                  Find Glorious Living and Loving Space
+                </h1>
+                <p class="text-white text-[18px] leading-[32px] mt-[10px]">
+                  Dolor house comfortable si amet with cheap price that also lorem when you need grow.
+                </p>
+                <form>
+                  <div class="rounded-full overflow-hidden w-full flex items-center bg-dark h-[70px] mt-[50px]">
+                      <input
+                        type="search"
+                        name="city"
+                        autocomplete="off"
+                        placeholder="Search by city or country..."
+                        class="text-[20px] bg-transparent w-full text-white outline-none px-[30px] grow [&::-webkit-search-cancel-button]:hidden"
+                      />
+                    <button type="submit" class="font-semibold text-dark bg-brand px-[40px] h-full shrink-0 hover:bg-opacity-80">
+                      Explore Now
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Section Statistics -->
+      <section>
+        <div class="container relative pt-0">
+          <div class="bg-dark grid grid-cols-4 rounded-[20px] translate-y-[-75px] w-full">
+            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
+              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
+                <img src="./icon-stats-1.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
+              </div>
+              <div>
+                <h3 class="text-white font-extrabold text-[28px]">382M</h3>
+                <span class="text-steel">Kos Available</span>
+              </div>
+            </div>
+            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
+              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
+                <img src="./icon-stats-2.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
+              </div>
+              <div>
+                <h3 class="text-white font-extrabold text-[28px]">9/10</h3>
+                <span class="text-steel">People Happy</span>
+              </div>
+            </div>
+            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
+              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
+                <img src="./icon-stats-3.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
+              </div>
+              <div>
+                <h3 class="text-white font-extrabold text-[28px]">100%</h3>
+                <span class="text-steel">High Security</span>
+              </div>
+            </div>
+            <div class="col-span-4 lg:col-span-1 flex items-center gap-[16px] px-[50px] my-[30px] border-r border-[#353535] last:border-none">
+              <div class="bg-brand w-[70px] h-[70px] shrink-0 rounded-full flex items-center justify-center">
+                <img src="./icon-stats-4.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
+              </div>
+              <div>
+                <h3 class="text-white font-extrabold text-[28px]">183</h3>
+                <span class="text-steel">Countries</span>
+              </div>
+            </div>
+  
+          </div>
+        </div>
+      </section>
+  
+      <!-- Section Latest Deals -->
+      <section>
+        <div class="container pt-[50px] pb-[100px]">
+          <div class="flex flex-col items-center justify-center">
+            <h2 class="text-white text-[28px] font-bold">Our Latest Deals</h2>
+            <p class="text-steel">Explore the beauty of architecture and living love</p>
+          </div>
+          <div class="grid grid-cols-2 lg:grid-cols-4 mt-[30px] gap-[30px]">
+            <a href="#">
+              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-1.jpg)] bg-cover relative group">
+                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">De Flecce</h4>
+                      <span><strong>$47,298</strong>/mo</span>
+                    </div>
+                    <div class="flex gap-[2px]">
+                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                      <span>4.5/5</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>529 sqft</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>3</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>10gb</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-2.jpg)] bg-cover relative group">
+                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">Party Every</h4>
+                      <span><strong>$18,983</strong>/mo</span>
+                    </div>
+                    <div class="flex gap-[2px]">
+                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                      <span>4.5/5</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>529 sqft</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>3</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>10gb</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-3.jpg)] bg-cover relative group">
+                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">Brown Hall</h4>
+                      <span><strong>$84,209</strong>/mo</span>
+                    </div>
+                    <div class="flex gap-[2px]">
+                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                      <span>4.5/5</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>529 sqft</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>3</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>10gb</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+            <a href="#">
+              <div class="rounded-[24px] h-[350px] bg-[url(./image-deals-4.jpg)] bg-cover relative group">
+                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
+                  <div class="flex items-center justify-between">
+                    <div>
+                      <h4 class="text-[20px] text-ellipsis overflow-hidden font-bold">Mini Max</h4>
+                      <span><strong>$14,221</strong>/mo</span>
+                    </div>
+                    <div class="flex gap-[2px]">
+                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                      <span>4.5/5</span>
+                    </div>
+                  </div>
+                  <div class="flex items-center justify-between">
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>529 sqft</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-users.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>3</span>
+                    </div>
+                    <div class="flex items-center gap-[2px] mt-[14px]">
+                      <img src="./icon-wifi.svg" alt="Area" aria-label="Area" width="18" height="18" />
+                      <span>10gb</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+  
+      <!-- Section Categories -->
+      <section class="bg-dark">
+        <div class="container py-[50px] space-y-[30px]">
+          <div class="flex items-center justify-between">
+            <div>
+              <h2 class="text-white text-[28px] font-bold">Categories</h2>
+              <p class="text-steel">We provide everything</p>
+            </div>
+            <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Explore All</button>
+          </div>
+
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-[30px]">
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-1.svg" alt="Star Hills Icon" aria-label="Star Hills Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Star Hills</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-2.svg" alt="Apartment Icon" aria-label="Apartment Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Apartment</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-3.svg" alt="Nearby City Icon" aria-label="Nearby City Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Nearby City</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-4.svg" alt="Landed House Icon" aria-label="Landed House Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Landed House</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-5.svg" alt="Airport Icon" aria-label="Airport Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Airport</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-6.svg" alt="Awards Icon" aria-label="Awards Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Awards</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-7.svg" alt="Sunset Icon" aria-label="Sunset Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Sunset</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
+                <img src="./icon-cat-8.svg" alt="Others Icon" aria-label="Others Icon" width="32" height="32" class="shrink-0" />
+                <div class="grow">
+                  <h4 class="text-white text-[20px] font-bold">Others</h4>
+                  <span class="text-steel">18,394</span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Benefits -->
+      <section>
+        <div class="container py-[100px]">
+          <div class="grid grid-cols-12 gap-[50px]">
+            <div class="col-span-12 lg:col-span-5 space-y-[30px]">
+              <h2 class="text-white text-[28px] font-bold">Huge Benefits That<br />Make You Feel Happier</h2>
+              <ul class="space-y-[24px]">
+                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">Checking faster without depositing</li>
+                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">24/7 security guarding your place</li>
+                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">Fast-internet access without lagging</li>
+                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">High standard of layout of houses</li>
+                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">All other benefits, we promise</li>
+              </ul>
+              <div class="flex items-center gap-[12px]">
+                <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80  font-semibold">
+                  <div class="flex items-center gap-[8px]">
+                    <img src="./icon-message.svg" alt="Message Icon" aria-label="Message Icon" width="20" height="20" />
+                    <span>Call Sales</span>
+                  </div>
+                </button>
+                <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">All Benefits</button>
+              </div>
+            </div>
+            <div class="col-span-12 lg:col-span-7">
+              <div class="grid grid-cols-2 gap-[30px]">
+
+                <!-- "House for Office and Living", "House Nearby with Mall", "House Historical Building", "Landed House with Park" -->
+                <a href="#">      
+                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-1.jpg)] bg-cover relative group">
+                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
+                      <div class="flex items-center justify-between gap-[16px]">
+                        <h4 class="text-[20px] font-bold grow">House for Office and Living</h4>
+                        <div class="flex gap-[2px] shrink-0">
+                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                          <span>18,309</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-2.jpg)] bg-cover relative group">
+                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
+                      <div class="flex items-center justify-between gap-[16px]">
+                        <h4 class="text-[20px] font-bold grow">House Nearby with Mall</h4>
+                        <div class="flex gap-[2px] shrink-0">
+                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                          <span>18,309</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-3.jpg)] bg-cover relative group">
+                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
+                      <div class="flex items-center justify-between gap-[16px]">
+                        <h4 class="text-[20px] font-bold grow">House Historical Building</h4>
+                        <div class="flex gap-[2px] shrink-0">
+                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                          <span>18,309</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+
+                <a href="#">
+                  <div class="rounded-[24px] h-[200px] bg-[url(./image-ben-4.jpg)] bg-cover relative group">
+                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
+                      <div class="flex items-center justify-between gap-[16px]">
+                        <h4 class="text-[20px] font-bold grow">Landed House with Park</h4>
+                        <div class="flex gap-[2px] shrink-0">
+                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                          <span>18,309</span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Testimonials -->
+      <section>
+        <div class="container">
+          <div class="flex flex-col items-center justify-center">
+            <h2 class="text-white text-[28px] font-bold">Happy Customers</h2>
+            <p class="text-steel">We’d love to come back again soon</p>
+          </div>
+          <ul class="testi-list columns-2 md:columns-3 gap-[30px] space-y-[30px] mt-[30px]">
+            <li class="testi-card bg-dark2 rounded-[20px] px-[20px] py-[16px] space-y-[20px] break-inside-avoid-column">
+              <div class="flex items-center">
+                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+              </div>
+              <p class="testi-comment">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
+              <div class="flex items-center gap-[12px]">
+                <img src="./image-testi-avatar.jpg" alt="Evelin Bie" aria-label="Evelin Bie" width="50" height="50" class="rounded-full" />
+                <div class="flex flex-col gap-[4px]">
+                  <span class="font-bold">Evelin Bie</span>
+                  <span class="text-steel text-[14px]">Full-Time Traveler</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="container py-[100px] flex flex-col gap-[50px]">
+        <div class="flex flex-wrap gap-[50px] py-[50px]">
+          <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
+            <div class="space-y-[12px]">
+              <h5 class="font-semibold">Solutions</h5>
+              <ul class="space-y-[12px]">
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Credit Rewards</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">P2P Renting</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Open for Listing</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">AI Automation</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">APIs Developer</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
+            <div class="space-y-[12px]">
+              <h5 class="font-semibold">Product</h5>
+              <ul class="space-y-[12px]">
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Featured House</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Browse Categories</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Special Awards</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Made-In Bandung</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Exclusive Style</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
+            <div class="space-y-[12px]">
+              <h5 class="font-semibold">Company</h5>
+              <ul class="space-y-[12px]">
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">About Us</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Our Investors</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Missions 2024</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Careers</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Media Press</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="w-full lg:w-auto grow">
+            <div class="space-y-[30px]">
+              <div class="space-y-[12px]">
+                <h5 class="font-semibold">Subscribe & Free Rewards</h5>
+                <form>
+                  <div class="rounded-full overflow-hidden w-full flex items-center bg-white gap-[8px] pl-[20px]">
+                    <img src="./icon-mail.svg" alt="Mail Icon" aria-label="Mail Icon" width="24" height="24" class="shrink-0" />
+                    <input
+                      type="email"
+                      name="mail"
+                      placeholder="Email Address"
+                      class="text-[16px] bg-transparent w-full text-black outline-none grow"
+                    />
+                    <button type="submit" class="font-semibold text-dark bg-brand px-[24px] py-[12px] h-full shrink-0 hover:bg-opacity-80 rounded-full">
+                      Subscribe
+                    </button>
+                  </div>
+                </form>
+              </div>
+              <div class="space-y-[12px]">
+                <h5 class="font-semibold">Choose Language</h5>
+                <div class="lang-wrapper flex items-center gap-[10px] cursor-pointer relative p-2 inline-flex">
+                  <img src="./icon-flag-uk.svg" alt="UK" aria-label="UK" width="24" height="20" class="shrink-0" />
+                  <input readonly class="text-[16px] bg-transparent text-white outline-none cursor-pointer" value="English (UK)" />
+                  <img src="./icon-chevron-down.svg" alt="Chevron Down" aria-label="Chevron Down" width="20" height="20" class="lang-icon shrink-0 transition-transform" />
+                  <div class="lang-dropdown absolute top-[100%] left-0 rounded-[20px] shadow-lg h-0 opacity-0">
+                    <ul class="bg-dark2">
+                      <li class="lang-option px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark">
+                        <img src="./icon-flag-uk.svg" alt="UK" aria-label="UK" width="24" height="20" class="shrink-0" />
+                        <span>English (UK)</span>
+                      </li>
+                      <li class="px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark">
+                        <img src="./icon-flag-id.svg" alt="ID" aria-label="ID" width="24" height="20" class="shrink-0" />
+                        <span>Indonesia (ID)</span>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="border-t border-[#353535]"></div>
+        <div class="flex items-center flex-wrap gap-[12px] justify-between w-full">
+          <div class="flex items-center gap-[10px] font-extrabold text-[24px]">
+            <img src="./logo-main.svg" alt="Nidejia Logo" aria-label="Nidejia Logo" height="36" />
+            <span>Nidejia</span>
+          </div>
+          <p class="text-steel">All Rights Reserved Nidejia BuildWithAngga 2024</p>
+        </div>
+      </div>
+    </footer>
+
+
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const header = document.querySelector('header');
+        const navbar = document.querySelector('.navbar');
+
+        window.addEventListener('scroll', () => {
+          if (window.scrollY > 0) {
+            navbar.classList.add('backdrop-blur-md');
+            navbar.classList.add('bg-opacity-60');
+            navbar.classList.add('shadow-lg');
+            header.classList.add('top-[10px]');
+          } else {
+            navbar.classList.remove('backdrop-blur-md');
+            navbar.classList.remove('bg-opacity-60');
+            navbar.classList.remove('shadow-lg');
+            header.classList.remove('top-[10px]');
+          }
+        });
+
+        // language dropdown
+        const langWrapper = document.querySelector('.lang-wrapper');
+        const langDropdown = document.querySelector('.lang-dropdown');
+        const langIcon = document.querySelector('.lang-icon');
+        langWrapper.addEventListener('click', () => {
+          langDropdown.classList.toggle('h-0');
+          langDropdown.classList.toggle('opacity-0');
+          langIcon.classList.toggle('rotate-180');
+        });
+
+        window.addEventListener('click', (e) => {
+          if (!langWrapper.contains(e.target)) {
+            langDropdown.classList.add('h-0');
+            langDropdown.classList.add('opacity-0');
+            langIcon.classList.remove('rotate-180');
+          }
+        });
+
+        (function () {
+          const dummyTestimonials = [
+            "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
+            "It’s just amazing, will be back.",
+            "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
+            "Price was too low yet luxury.",
+            "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
+            "During covid I was stayed here and I got a lot of full of supports that I need to keep my body healthy.",
+            "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
+            "It’s just amazing, will be back.",
+            "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
+          ]
+
+          const testiList = document.querySelector('.testi-list');
+          const testiCard = document.querySelector('.testi-card');
+          dummyTestimonials.forEach((testi, index) => {
+            const newTestiCard = index !== 0 ? testiCard.cloneNode(true) : testiCard;
+            newTestiCard.querySelector('.testi-comment').textContent = testi;
+            testiList.appendChild(newTestiCard);
+          });
+        })();
+      });
+    </script>
+  </body>
+</html>
