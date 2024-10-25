@@ -1,27 +1,30 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Nidejia - Glorious Living and Loving Space</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <script>
       tailwind.config = {
         theme: {
           extend: {
             colors: {
-              brand: '#FF9357',
-              secondary: '#323437',
-              dark: '#141414',
-              dark2: '#202020',
-              steel: '#A8A8AB',
-            }
-          }
-        }
-      }
+              brand: "#FF9357",
+              secondary: "#323437",
+              dark: "#141414",
+              dark2: "#202020",
+              steel: "#A8A8AB",
+            },
+          },
+        },
+      };
     </script>
     <style type="text/tailwindcss">
       @layer component {
@@ -32,29 +35,64 @@
     </style>
   </head>
   <body class="bg-black text-white font-['Poppins']">
-    <header class="fixed top-[30px] left-[50%] -translate-x-1/2 w-full z-20 transition-all">
+    <header
+      class="fixed top-[30px] left-[50%] -translate-x-1/2 w-full z-20 transition-all"
+    >
       <div class="container">
-        <nav class="navbar w-full rounded-[20px] bg-dark text-white px-[30px] py-[24px] flex justify-between items-center">
+        <nav
+          class="navbar w-full rounded-[20px] bg-dark text-white px-[30px] py-[24px] flex justify-between items-center"
+        >
           <div class="flex items-center gap-[10px] font-extrabold text-[24px]">
-            <img src="./logo-main.svg" alt="Nidejia Logo" aria-label="Nidejia Logo" height="36" />
+            <img
+              src="./logo-main.svg"
+              alt="Nidejia Logo"
+              aria-label="Nidejia Logo"
+              height="36"
+            />
             <span>Nidejia</span>
           </div>
           <ul class="hidden lg:flex items-center gap-[30px]">
-            <li class="font-semibold hover:underline"><a href="#">Featured</a></li>
-            <li class="font-semibold hover:underline"><a href="#">Categories</a></li>
-            <li class="font-semibold hover:underline"><a href="#">Testimonials</a></li>
-            <li class="font-semibold hover:underline"><a href="#">About</a></li>
+            <li class="font-semibold hover:underline">
+              <a href="#deals">Featured</a>
+            </li>
+            <li class="font-semibold hover:underline">
+              <a href="#categories">Categories</a>
+            </li>
+            <li class="font-semibold hover:underline">
+              <a href="#testimonials">Testimonials</a>
+            </li>
+            <li class="font-semibold hover:underline">
+              <a href="#benefits">About</a>
+            </li>
           </ul>
           <div class="hidden lg:flex items-center gap-[12px]">
-            <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Sign In</button>
-            <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">Sign Up</button>
+            <button
+              class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+            >
+              Sign In
+            </button>
+            <button
+              class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
+            >
+              Sign Up
+            </button>
           </div>
           <button class="hamburger-menu lg:hidden">
-            <div class="flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all !ring-0 outline-none ring-gray-300 hover:ring-8 focus:ring-4 ring-opacity-30 duration-200">
-              <div class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden">
-                <span class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"></span>
-                <span class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300"></span>
-                <span class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"></span>
+            <div
+              class="flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all !ring-0 outline-none ring-gray-300 hover:ring-8 focus:ring-4 ring-opacity-30 duration-200"
+            >
+              <div
+                class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden"
+              >
+                <span
+                  class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"
+                ></span>
+                <span
+                  class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300"
+                ></span>
+                <span
+                  class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"
+                ></span>
               </div>
             </div>
           </button>
@@ -62,15 +100,33 @@
       </div>
     </header>
 
-    <aside class="drawer-menu opacity-0 lg:hidden z-10 fixed top-0 right-0 w-screen bg-dark bg-opacity-0 flex items-center justify-center transition-all -translate-y-[100%] pt-[180px] pb-[50px]">
+    <aside
+      class="drawer-menu opacity-0 lg:hidden z-10 fixed top-0 right-0 left-0 w-full bg-dark bg-opacity-0 flex items-center justify-center transition-all -translate-y-[100%] pt-[180px] pb-[50px]"
+    >
       <ul class="flex flex-col items-center gap-[30px]">
-        <li class="font-semibold hover:underline"><a href="#">Featured</a></li>
-        <li class="font-semibold hover:underline"><a href="#">Categories</a></li>
-        <li class="font-semibold hover:underline"><a href="#">Testimonials</a></li>
-        <li class="font-semibold hover:underline"><a href="#">About</a></li>
+        <li class="font-semibold hover:underline">
+          <a href="#deals">Featured</a>
+        </li>
+        <li class="font-semibold hover:underline">
+          <a href="#categories">Categories</a>
+        </li>
+        <li class="font-semibold hover:underline">
+          <a href="#testimonials">Testimonials</a>
+        </li>
+        <li class="font-semibold hover:underline">
+          <a href="#benefits">About</a>
+        </li>
         <div class="flex items-center gap-[12px]">
-          <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Sign In</button>
-          <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">Sign Up</button>
+          <button
+            class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+          >
+            Sign In
+          </button>
+          <button
+            class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
+          >
+            Sign Up
+          </button>
         </div>
       </ul>
     </aside>
@@ -86,10 +142,13 @@
                   Find Glorious Living and Loving Space
                 </h1>
                 <p class="text-white text-[18px] leading-[32px] mt-[10px]">
-                  Dolor house comfortable si amet with cheap price that also lorem when you need grow.
+                  Dolor house comfortable si amet with cheap price that also
+                  lorem when you need grow.
                 </p>
                 <form>
-                  <div class="rounded-full overflow-hidden w-full flex items-center bg-dark h-[70px] mt-[50px]">
+                  <div
+                    class="rounded-full overflow-hidden w-full flex items-center bg-dark h-[70px] mt-[50px]"
+                  >
                     <input
                       type="search"
                       name="city"
@@ -97,7 +156,10 @@
                       placeholder="Search by city or country..."
                       class="text-[20px] bg-transparent w-full text-white outline-none px-[30px] grow [&::-webkit-search-cancel-button]:hidden"
                     />
-                    <button type="submit" class="font-semibold text-dark bg-brand px-[20px] md:px-[40px] h-full shrink-0 hover:bg-opacity-80">
+                    <button
+                      type="submit"
+                      class="font-semibold text-dark bg-brand px-[20px] md:px-[40px] h-full shrink-0 hover:bg-opacity-80"
+                    >
                       Explore Now
                     </button>
                   </div>
@@ -107,81 +169,176 @@
           </div>
         </div>
       </section>
-  
+
       <!-- Section Statistics -->
       <section>
         <div class="container relative pt-0">
-          <div class="stats-list bg-dark grid grid-cols-2 lg:grid-cols-4 rounded-[20px] translate-y-[-75px] w-full">
-            <div class="stats-item flex items-center gap-[16px] px-[24px] lg:px-[50px] my-[30px] lg:border-r border-[#353535] last:border-none odd:border-r">
-              <div class="bg-brand w-[40px] lg:w-[70px] h-[40px] lg:h-[70px] shrink-0 rounded-full flex items-center justify-center">
-                <img src="./icon-stats-1.svg" alt="Icon 1" aria-label="Icon 1" width="32" height="32" />
+          <div
+            class="stats-list bg-dark grid grid-cols-2 lg:grid-cols-4 rounded-[20px] translate-y-[-75px] w-full"
+          >
+            <div
+              class="stats-item flex items-center gap-[16px] px-[24px] lg:px-[50px] my-[30px] lg:border-r border-[#353535] last:border-none odd:border-r"
+            >
+              <div
+                class="bg-brand w-[40px] lg:w-[70px] h-[40px] lg:h-[70px] shrink-0 rounded-full flex items-center justify-center"
+              >
+                <img
+                  src="./icon-stats-1.svg"
+                  alt="Icon 1"
+                  aria-label="Icon 1"
+                  width="32"
+                  height="32"
+                />
               </div>
               <div>
-                <h3 class="text-white font-extrabold text-[20px] lg:text-[28px]">382M</h3>
-                <span class="text-steel text-[12px] lg:text-[16px]">Kos Available</span>
+                <h3
+                  class="text-white font-extrabold text-[20px] lg:text-[28px]"
+                >
+                  382M
+                </h3>
+                <span class="text-steel text-[12px] lg:text-[16px]"
+                  >Kos Available</span
+                >
               </div>
             </div>
           </div>
         </div>
       </section>
-  
+
       <!-- Section Latest Deals -->
-      <section>
+      <section id="deals">
         <div class="container pt-[50px] pb-[100px]">
           <div class="flex flex-col items-center justify-center">
             <h2 class="text-white text-[28px] font-bold">Our Latest Deals</h2>
-            <p class="text-steel">Explore the beauty of architecture and living love</p>
+            <p class="text-steel">
+              Explore the beauty of architecture and living love
+            </p>
           </div>
-          <div class="deal-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mt-[30px] gap-[16px] sm:gap-[30px]">
-            <a class="deal-item" href="#">
-              <div class="deal-wrapper rounded-[24px] h-[200px] sm:h-[350px] bg-[url(./image-deals-1.jpg)] bg-cover bg-center relative group">
-                <div class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]">
-                  <div class="flex items-center justify-between">
-                    <div>
-                      <h4 class="deal-name text-[20px] text-ellipsis overflow-hidden font-bold">De Flecce</h4>
-                      <span><strong class="deal-price">$47,298</strong>/mo</span>
+          <div class="relative">
+            <button
+              class="deal-prev w-[50px] h-[50px] hover:scale-105 transition-transform absolute left-0 top-[72px] transform translate-x-[-50%] bg-dark rounded-full flex items-center justify-center shadow-lg z-10"
+            >
+              <img
+                src="./icon-chevron-left.svg"
+                alt="Previous"
+                aria-label="Previous"
+                width="20"
+                height="20"
+              />
+            </button>
+            <button
+              class="deal-next w-[50px] h-[50px] hover:scale-105 transition-transform absolute right-0 top-[72px] transform translate-x-[50%] bg-dark rounded-full flex items-center justify-center shadow-lg z-10"
+            >
+              <img
+                src="./icon-chevron-right.svg"
+                alt="Next"
+                aria-label="Next"
+                width="20"
+                height="20"
+              />
+            </button>
+            <div class="deal-list flex mt-[30px] overflow-hidden">
+              <div
+                class="deal-item pr-[30px] shrink-0 w-[calc(100%+30px)] sm:w-[calc((100%+30px)/2)] lg:w-[calc((100%+30px)/4)]"
+              >
+                <div
+                  class="deal-wrapper rounded-[24px] h-[200px] sm:h-[350px] bg-[url(./image-deals-1.jpg)] bg-cover bg-center relative group"
+                >
+                  <div
+                    class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]"
+                  >
+                    <div class="flex items-center justify-between">
+                      <div>
+                        <h4
+                          class="deal-name text-[20px] text-ellipsis overflow-hidden font-bold"
+                        >
+                          De Flecce
+                        </h4>
+                        <span
+                          ><strong class="deal-price">$47,298</strong>/mo</span
+                        >
+                      </div>
+                      <div class="flex gap-[2px]">
+                        <img
+                          src="./icon-stars.svg"
+                          alt="Rating"
+                          aria-label="Rating"
+                          width="20"
+                          height="20"
+                        />
+                        <span class="deal-rating">4.5/5</span>
+                      </div>
                     </div>
-                    <div class="flex gap-[2px]">
-                      <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                      <span class="deal-rating">4.5/5</span>
-                    </div>
-                  </div>
-                  <div class="flex items-center justify-between">
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-sqm.svg" alt="Area" aria-label="Area" width="18" height="18" />
-                      <span class="deal-area">529 sqft</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-users.svg" alt="Capacity" aria-label="Capacity" width="18" height="18" />
-                      <span class="deal-capacity">3</span>
-                    </div>
-                    <div class="flex items-center gap-[2px] mt-[14px]">
-                      <img src="./icon-wifi.svg" alt="Wifi" aria-label="Wifi" width="18" height="18" />
-                      <span class="deal-wifi">10gb</span>
+                    <div class="flex items-center justify-between">
+                      <div class="flex items-center gap-[2px] mt-[14px]">
+                        <img
+                          src="./icon-sqm.svg"
+                          alt="Area"
+                          aria-label="Area"
+                          width="18"
+                          height="18"
+                        />
+                        <span class="deal-area">529 sqft</span>
+                      </div>
+                      <div class="flex items-center gap-[2px] mt-[14px]">
+                        <img
+                          src="./icon-users.svg"
+                          alt="Capacity"
+                          aria-label="Capacity"
+                          width="18"
+                          height="18"
+                        />
+                        <span class="deal-capacity">3</span>
+                      </div>
+                      <div class="flex items-center gap-[2px] mt-[14px]">
+                        <img
+                          src="./icon-wifi.svg"
+                          alt="Wifi"
+                          aria-label="Wifi"
+                          width="18"
+                          height="18"
+                        />
+                        <span class="deal-wifi">10gb</span>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </a>
+            </div>
           </div>
         </div>
       </section>
-  
+
       <!-- Section Categories -->
-      <section class="bg-dark">
+      <section id="categories" class="bg-dark">
         <div class="container py-[50px] space-y-[30px]">
           <div class="flex items-center justify-between">
             <div>
               <h2 class="text-white text-[28px] font-bold">Categories</h2>
               <p class="text-steel">We provide everything</p>
             </div>
-            <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold">Explore All</button>
+            <button
+              class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+            >
+              Explore All
+            </button>
           </div>
 
-          <div class="cat-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-[30px]">
+          <div
+            class="cat-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-[30px]"
+          >
             <a class="cat-item" href="#">
-              <div class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform">
-                <img src="./icon-cat-1.svg" alt="Star Hills Icon" aria-label="Star Hills Icon" width="32" height="32" class="shrink-0" />
+              <div
+                class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform"
+              >
+                <img
+                  src="./icon-cat-1.svg"
+                  alt="Star Hills Icon"
+                  aria-label="Star Hills Icon"
+                  width="32"
+                  height="32"
+                  class="shrink-0"
+                />
                 <div class="grow">
                   <h4 class="text-white text-[20px] font-bold">Star Hills</h4>
                   <span class="text-steel">18,394</span>
@@ -193,37 +350,85 @@
       </section>
 
       <!-- Section Benefits -->
-      <section>
+      <section id="benefits">
         <div class="container py-[100px]">
           <div class="grid grid-cols-1 lg:grid-cols-12 gap-[50px]">
             <div class="col-span-1 lg:col-span-5 space-y-[30px]">
-              <h2 class="text-white text-[28px] font-bold">Huge Benefits That<br />Make You Feel Happier</h2>
+              <h2 class="text-white text-[28px] font-bold">
+                Huge Benefits That<br />Make You Feel Happier
+              </h2>
               <ul class="space-y-[24px]">
-                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">Checking faster without depositing</li>
-                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">24/7 security guarding your place</li>
-                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">Fast-internet access without lagging</li>
-                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">High standard of layout of houses</li>
-                <li class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]">All other benefits, we promise</li>
+                <li
+                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
+                >
+                  Checking faster without depositing
+                </li>
+                <li
+                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
+                >
+                  24/7 security guarding your place
+                </li>
+                <li
+                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
+                >
+                  Fast-internet access without lagging
+                </li>
+                <li
+                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
+                >
+                  High standard of layout of houses
+                </li>
+                <li
+                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
+                >
+                  All other benefits, we promise
+                </li>
               </ul>
               <div class="flex items-center gap-[12px]">
-                <button class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80  font-semibold">
+                <button
+                  class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+                >
                   <div class="flex items-center gap-[8px]">
-                    <img src="./icon-message.svg" alt="Message Icon" aria-label="Message Icon" width="20" height="20" />
+                    <img
+                      src="./icon-message.svg"
+                      alt="Message Icon"
+                      aria-label="Message Icon"
+                      width="20"
+                      height="20"
+                    />
                     <span>Call Sales</span>
                   </div>
                 </button>
-                <button class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold">All Benefits</button>
+                <button
+                  class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
+                >
+                  All Benefits
+                </button>
               </div>
             </div>
             <div class="col-span-1 lg:col-span-7">
-              <div class="benefit-list grid grid-cols-1 md:grid-cols-2 gap-[30px]">
-                <a class="benefit-item" href="#">      
-                  <div class="benefit-wrapper rounded-[24px] h-[200px] bg-[url(./image-ben-1.jpg)] bg-cover relative group">
-                    <div class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0">
+              <div
+                class="benefit-list grid grid-cols-1 md:grid-cols-2 gap-[30px]"
+              >
+                <a class="benefit-item" href="#">
+                  <div
+                    class="benefit-wrapper rounded-[24px] h-[200px] bg-[url(./image-ben-1.jpg)] bg-cover relative group"
+                  >
+                    <div
+                      class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0"
+                    >
                       <div class="flex items-center justify-between gap-[16px]">
-                        <h4 class="text-[20px] font-bold grow">House for Office and Living</h4>
+                        <h4 class="text-[20px] font-bold grow">
+                          House for Office and Living
+                        </h4>
                         <div class="flex gap-[2px] shrink-0">
-                          <img src="./icon-users.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
+                          <img
+                            src="./icon-users.svg"
+                            alt="Rating"
+                            aria-label="Rating"
+                            width="20"
+                            height="20"
+                          />
                           <span>18,309</span>
                         </div>
                       </div>
@@ -237,33 +442,83 @@
       </section>
 
       <!-- Section Testimonials -->
-      <section>
+      <section id="testimonials">
         <div class="container">
           <div class="flex flex-col items-center justify-center">
             <h2 class="text-white text-[28px] font-bold">Happy Customers</h2>
             <p class="text-steel">We’d love to come back again soon</p>
           </div>
-          <ul class="testi-list columns-1 sm:column-2 lg:columns-3 gap-[16px] sm:gap-[30px] space-y-[16px] sm:space-y-[30px] mt-[30px]">
-            <li class="testi-card bg-dark2 rounded-[20px] px-[20px] py-[16px] space-y-[20px] break-inside-avoid-column">
-              <div class="flex items-center">
-                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-                <img src="./icon-stars.svg" alt="Rating" aria-label="Rating" width="20" height="20" />
-              </div>
-              <p class="testi-comment">I was not so sure if there was a beautiful bedroom, but it was really great experience.</p>
-              <div class="flex items-center gap-[12px]">
-                <img src="./image-testi-avatar.jpg" alt="Evelin Bie" aria-label="Evelin Bie" width="50" height="50" class="rounded-full" />
-                <div class="flex flex-col gap-[4px]">
-                  <span class="font-bold">Evelin Bie</span>
-                  <span class="text-steel text-[14px]">Full-Time Traveler</span>
+          <div
+            class="testi-wrapper relative max-h-[700px] lg:max-h-none overflow-hidden"
+          >
+            <ul
+              class="testi-list columns-1 md:column-2 lg:columns-3 gap-[16px] sm:gap-[30px] space-y-[16px] sm:space-y-[30px] mt-[30px]"
+            >
+              <li
+                class="testi-card bg-dark2 rounded-[20px] px-[20px] py-[16px] space-y-[20px] break-inside-avoid-column"
+              >
+                <div class="flex items-center">
+                  <img
+                    src="./icon-stars.svg"
+                    alt="Rating"
+                    aria-label="Rating"
+                    width="20"
+                    height="20"
+                  />
+                  <img
+                    src="./icon-stars.svg"
+                    alt="Rating"
+                    aria-label="Rating"
+                    width="20"
+                    height="20"
+                  />
+                  <img
+                    src="./icon-stars.svg"
+                    alt="Rating"
+                    aria-label="Rating"
+                    width="20"
+                    height="20"
+                  />
+                  <img
+                    src="./icon-stars.svg"
+                    alt="Rating"
+                    aria-label="Rating"
+                    width="20"
+                    height="20"
+                  />
                 </div>
-              </div>
-            </li>
-          </ul>
+                <p class="testi-comment">
+                  I was not so sure if there was a beautiful bedroom, but it was
+                  really great experience.
+                </p>
+                <div class="flex items-center gap-[12px]">
+                  <img
+                    src="./image-testi-avatar.jpg"
+                    alt="Evelin Bie"
+                    aria-label="Evelin Bie"
+                    width="50"
+                    height="50"
+                    class="rounded-full"
+                  />
+                  <div class="flex flex-col gap-[4px]">
+                    <span class="font-bold">Evelin Bie</span>
+                    <span class="text-steel text-[14px]"
+                      >Full-Time Traveler</span
+                    >
+                  </div>
+                </div>
+              </li>
+            </ul>
+            <div
+              class="testi-expand lg:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black from-20% to-transparent flex items-center justify-center p-[30px] cursor-pointer"
+            >
+              <span class="text-brand font-semibold"
+                >View All Testimonials</span
+              >
+            </div>
+          </div>
         </div>
       </section>
-
     </main>
 
     <footer>
@@ -273,11 +528,21 @@
             <div class="space-y-[12px]">
               <h5 class="font-semibold">Solutions</h5>
               <ul class="space-y-[12px]">
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Credit Rewards</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">P2P Renting</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Open for Listing</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">AI Automation</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">APIs Developer</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Credit Rewards</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">P2P Renting</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Open for Listing</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">AI Automation</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">APIs Developer</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -285,11 +550,21 @@
             <div class="space-y-[12px]">
               <h5 class="font-semibold">Product</h5>
               <ul class="space-y-[12px]">
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Featured House</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Browse Categories</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Special Awards</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Made-In Bandung</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Exclusive Style</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Featured House</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Browse Categories</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Special Awards</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Made-In Bandung</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Exclusive Style</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -297,11 +572,21 @@
             <div class="space-y-[12px]">
               <h5 class="font-semibold">Company</h5>
               <ul class="space-y-[12px]">
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">About Us</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Our Investors</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Missions 2024</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Careers</a></li>
-                <li class="text-steel hover:text-brand hover:font-semibold"><a href="#">Media Press</a></li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">About Us</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Our Investors</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Missions 2024</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Careers</a>
+                </li>
+                <li class="text-steel hover:text-brand hover:font-semibold">
+                  <a href="#">Media Press</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -310,15 +595,27 @@
               <div class="space-y-[12px]">
                 <h5 class="font-semibold">Subscribe & Free Rewards</h5>
                 <form>
-                  <div class="rounded-full overflow-hidden w-full flex items-center bg-white gap-[8px] pl-[20px]">
-                    <img src="./icon-mail.svg" alt="Mail Icon" aria-label="Mail Icon" width="24" height="24" class="shrink-0" />
+                  <div
+                    class="rounded-full overflow-hidden w-full flex items-center bg-white gap-[8px] pl-[20px]"
+                  >
+                    <img
+                      src="./icon-mail.svg"
+                      alt="Mail Icon"
+                      aria-label="Mail Icon"
+                      width="24"
+                      height="24"
+                      class="shrink-0"
+                    />
                     <input
                       type="email"
                       name="mail"
                       placeholder="Email Address"
                       class="text-[16px] bg-transparent w-full text-black outline-none grow"
                     />
-                    <button type="submit" class="font-semibold text-dark bg-brand px-[24px] py-[12px] h-full shrink-0 hover:bg-opacity-80 rounded-full">
+                    <button
+                      type="submit"
+                      class="font-semibold text-dark bg-brand px-[24px] py-[12px] h-full shrink-0 hover:bg-opacity-80 rounded-full"
+                    >
                       Subscribe
                     </button>
                   </div>
@@ -326,18 +623,58 @@
               </div>
               <div class="space-y-[12px]">
                 <h5 class="font-semibold">Choose Language</h5>
-                <div class="lang-wrapper flex items-center gap-[10px] cursor-pointer relative p-2 inline-flex">
-                  <img src="./icon-flag-uk.svg" alt="UK" aria-label="UK" width="24" height="20" class="shrink-0" />
-                  <input readonly class="text-[16px] bg-transparent text-white outline-none cursor-pointer" value="English (UK)" />
-                  <img src="./icon-chevron-down.svg" alt="Chevron Down" aria-label="Chevron Down" width="20" height="20" class="lang-icon shrink-0 transition-transform" />
-                  <div class="lang-dropdown absolute top-[100%] left-0 rounded-[20px] shadow-lg h-0 opacity-0">
+                <div
+                  class="lang-wrapper flex items-center gap-[10px] cursor-pointer relative p-2 inline-flex"
+                >
+                  <img
+                    src="./icon-flag-uk.svg"
+                    alt="UK"
+                    aria-label="UK"
+                    width="24"
+                    height="20"
+                    class="shrink-0"
+                  />
+                  <input
+                    readonly
+                    class="text-[16px] bg-transparent text-white outline-none cursor-pointer"
+                    value="English (UK)"
+                  />
+                  <img
+                    src="./icon-chevron-down.svg"
+                    alt="Chevron Down"
+                    aria-label="Chevron Down"
+                    width="20"
+                    height="20"
+                    class="lang-icon shrink-0 transition-transform"
+                  />
+                  <div
+                    class="lang-dropdown absolute top-[100%] left-0 rounded-[20px] shadow-lg h-0 opacity-0"
+                  >
                     <ul class="bg-dark2">
-                      <li class="lang-option px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark">
-                        <img src="./icon-flag-uk.svg" alt="UK" aria-label="UK" width="24" height="20" class="shrink-0" />
+                      <li
+                        class="lang-option px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark"
+                      >
+                        <img
+                          src="./icon-flag-uk.svg"
+                          alt="UK"
+                          aria-label="UK"
+                          width="24"
+                          height="20"
+                          class="shrink-0"
+                        />
                         <span>English (UK)</span>
                       </li>
-                      <li class="px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark">
-                        <img src="./icon-flag-id.svg" alt="ID" aria-label="ID" width="24" height="20" class="shrink-0" />
+                      <li
+                        class="px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark"
+                      >
+                        <img
+                          src="./icon-flag-id.svg"
+                          alt="ID"
+                          aria-label="ID"
+                          width="24"
+                          height="20"
+                          class="shrink-0"
+                        />
                         <span>Indonesia (ID)</span>
                       </li>
                     </ul>
@@ -348,96 +685,182 @@
           </div>
         </div>
         <div class="border-t border-[#353535]"></div>
-        <div class="flex items-center flex-wrap gap-[12px] justify-between w-full">
+        <div
+          class="flex items-center flex-wrap gap-[12px] justify-between w-full"
+        >
           <div class="flex items-center gap-[10px] font-extrabold text-[24px]">
-            <img src="./logo-main.svg" alt="Nidejia Logo" aria-label="Nidejia Logo" height="36" />
+            <img
+              src="./logo-main.svg"
+              alt="Nidejia Logo"
+              aria-label="Nidejia Logo"
+              height="36"
+            />
             <span>Nidejia</span>
           </div>
-          <p class="text-steel">All Rights Reserved Nidejia BuildWithAngga 2024</p>
+          <p class="text-steel">
+            All Rights Reserved Nidejia BuildWithAngga 2024
+          </p>
         </div>
       </div>
     </footer>
 
-
     <script>
-      document.addEventListener('DOMContentLoaded', () => {
-        const header = document.querySelector('header');
-        const navbar = document.querySelector('.navbar');
+      document.addEventListener("DOMContentLoaded", () => {
+        const header = document.querySelector("header");
+        const navbar = document.querySelector(".navbar");
 
-        window.addEventListener('scroll', () => {
+        window.addEventListener("scroll", () => {
           if (window.scrollY > 0) {
-            navbar.classList.add('backdrop-blur-md', 'bg-opacity-60', 'shadow-lg', '!py-[12px]');
-            header.classList.add('top-[10px]');
+            navbar.classList.add(
+              "backdrop-blur-md",
+              "bg-opacity-60",
+              "shadow-lg",
+              "!py-[12px]"
+            );
+            header.classList.add("top-[10px]");
           } else {
-            navbar.classList.remove('backdrop-blur-md', 'bg-opacity-60', 'shadow-lg', '!py-[12px]');
-            header.classList.remove('top-[10px]');
+            navbar.classList.remove(
+              "backdrop-blur-md",
+              "bg-opacity-60",
+              "shadow-lg",
+              "!py-[12px]"
+            );
+            header.classList.remove("top-[10px]");
           }
         });
 
         // language dropdown
-        const langWrapper = document.querySelector('.lang-wrapper');
-        const langDropdown = document.querySelector('.lang-dropdown');
-        const langIcon = document.querySelector('.lang-icon');
-        langWrapper.addEventListener('click', () => {
-          langDropdown.classList.toggle('h-0');
-          langDropdown.classList.toggle('opacity-0');
-          langIcon.classList.toggle('rotate-180');
+        const langWrapper = document.querySelector(".lang-wrapper");
+        const langDropdown = document.querySelector(".lang-dropdown");
+        const langIcon = document.querySelector(".lang-icon");
+        langWrapper.addEventListener("click", () => {
+          langDropdown.classList.toggle("h-0");
+          langDropdown.classList.toggle("opacity-0");
+          langIcon.classList.toggle("rotate-180");
         });
 
         // hamburger menu
-        const hamburgerMenu = document.querySelector('.hamburger-menu');
-        const drawerMenu = document.querySelector('.drawer-menu');
-        hamburgerMenu.addEventListener('click', () => {
-          hamburgerMenu.querySelectorAll('span').forEach((line, index) => {
-            if (index === 0) line.classList.toggle('rotate-[42deg]');
-            if (index === 1) line.classList.toggle('-translate-x-10');
-            if (index === 2) line.classList.toggle('-rotate-[42deg]');
+        const hamburgerMenu = document.querySelector(".hamburger-menu");
+        const drawerMenu = document.querySelector(".drawer-menu");
+        hamburgerMenu.addEventListener("click", () => {
+          hamburgerMenu.querySelectorAll("span").forEach((line, index) => {
+            if (index === 0) line.classList.toggle("rotate-[42deg]");
+            if (index === 1) line.classList.toggle("-translate-x-10");
+            if (index === 2) line.classList.toggle("-rotate-[42deg]");
           });
-          drawerMenu.classList.toggle('translate-y-0');
-          drawerMenu.classList.toggle('bg-opacity-[95%]');
-          drawerMenu.classList.toggle('opacity-100');
-          document.body.classList.toggle('overflow-hidden');
-        })
+          drawerMenu.classList.toggle("translate-y-0");
+          drawerMenu.classList.toggle("bg-opacity-[95%]");
+          drawerMenu.classList.toggle("opacity-100");
+          document.body.classList.toggle("overflow-hidden");
+        });
 
+        // handle carousel
+        const dealList = document.querySelector(".deal-list");
+        const dealItems = document.querySelectorAll(".deal-item");
+        const dealPrev = document.querySelector(".deal-prev");
+        const dealNext = document.querySelector(".deal-next");
+
+        let dealWidth = dealItems[0].offsetWidth;
+
+        dealPrev.addEventListener("click", () => {
+          if (dealList.scrollLeft + dealList.offsetWidth < dealList.scrollWidth)
+            dealList.scrollTo({ left: 0, behavior: "smooth" });
+          else {
+            const scrollLeft = dealList.scrollLeft;
+            dealList.scrollTo({
+              left: scrollLeft - dealWidth,
+              behavior: "smooth",
+            });
+          }
+        });
+
+        dealNext.addEventListener("click", () => {
+          if (
+            dealList.scrollWidth -
+              (dealList.scrollLeft + dealList.offsetWidth) <
+            dealWidth
+          ) {
+            dealList.scrollTo({ left: 0, behavior: "smooth" });
+          } else {
+            const scrollLeft = dealList.scrollLeft;
+            dealList.scrollTo({
+              left: scrollLeft + dealWidth,
+              behavior: "smooth",
+            });
+          }
+        });
+
+        // handle testimonials
+        const testiWrapper = document.querySelector(".testi-wrapper");
+        const testiExpand = document.querySelector(".testi-expand");
+
+        testiExpand.addEventListener("click", () => {
+          testiExpand.remove();
+          testiWrapper.classList.remove("max-h-[700px]");
+        });
 
         // handle outside click
-        window.addEventListener('click', (e) => {
+        window.addEventListener("click", (e) => {
           if (!langWrapper.contains(e.target)) {
-            langDropdown.classList.add('h-0');
-            langDropdown.classList.add('opacity-0');
-            langIcon.classList.remove('rotate-180');
+            langDropdown.classList.add("h-0");
+            langDropdown.classList.add("opacity-0");
+            langIcon.classList.remove("rotate-180");
           }
 
-          if (!hamburgerMenu.contains(e.target) && !drawerMenu.contains(e.target)) {
-            hamburgerMenu.classList.remove('ring-4');
-            hamburgerMenu.querySelectorAll('span').forEach((line, index) => {
-              if (index === 0) line.classList.remove('rotate-[42deg]');
-              if (index === 1) line.classList.remove('-translate-x-10');
-              if (index === 2) line.classList.remove('-rotate-[42deg]');
+          if (
+            !hamburgerMenu.contains(e.target) &&
+            !drawerMenu.contains(e.target)
+          ) {
+            hamburgerMenu.classList.remove("ring-4");
+            hamburgerMenu.querySelectorAll("span").forEach((line, index) => {
+              if (index === 0) line.classList.remove("rotate-[42deg]");
+              if (index === 1) line.classList.remove("-translate-x-10");
+              if (index === 2) line.classList.remove("-rotate-[42deg]");
             });
-            drawerMenu.classList.remove('translate-y-0');
-            drawerMenu.classList.toggle('bg-opacity-[95%]');
-            drawerMenu.classList.remove('opacity-100');
-            document.body.classList.remove('overflow-hidden');
+            drawerMenu.classList.remove("translate-y-0");
+            drawerMenu.classList.toggle("bg-opacity-[95%]");
+            drawerMenu.classList.remove("opacity-100");
+            document.body.classList.remove("overflow-hidden");
           }
         });
 
         // handle stats data
         (function () {
           const dummyStats = [
-            { id: 1, icon: './icon-stats-1.svg', title: '382M', desc: 'Kos Available' },
-            { id: 2, icon: './icon-stats-2.svg', title: '9/10', desc: 'People Happy' },
-            { id: 3, icon: './icon-stats-3.svg', title: '100%', desc: 'High Security' },
-            { id: 4, icon: './icon-stats-4.svg', title: '183', desc: 'Countries' },
-          ]
+            {
+              id: 1,
+              icon: "./icon-stats-1.svg",
+              title: "382M",
+              desc: "Kos Available",
+            },
+            {
+              id: 2,
+              icon: "./icon-stats-2.svg",
+              title: "9/10",
+              desc: "People Happy",
+            },
+            {
+              id: 3,
+              icon: "./icon-stats-3.svg",
+              title: "100%",
+              desc: "High Security",
+            },
+            {
+              id: 4,
+              icon: "./icon-stats-4.svg",
+              title: "183",
+              desc: "Countries",
+            },
+          ];
 
-          const statsList = document.querySelector('.stats-list');
-          const statsItem = document.querySelector('.stats-item');
+          const statsList = document.querySelector(".stats-list");
+          const statsItem = document.querySelector(".stats-item");
           dummyStats.forEach((stat, index) => {
-            const newStatsItem = index !== 0 ? statsItem.cloneNode(true) : statsItem;
-            newStatsItem.querySelector('img').src = stat.icon;
-            newStatsItem.querySelector('h3').textContent = stat.title;
-            newStatsItem.querySelector('span').textContent = stat.desc;
+            const newStatsItem =
+              index !== 0 ? statsItem.cloneNode(true) : statsItem;
+            newStatsItem.querySelector("img").src = stat.icon;
+            newStatsItem.querySelector("h3").textContent = stat.title;
+            newStatsItem.querySelector("span").textContent = stat.desc;
             statsList.appendChild(newStatsItem);
           });
         })();
@@ -445,23 +868,103 @@
         // handle latest deals data
         (function () {
           const dummyDeals = [
-            { id: 1, image: './image-deals-1.jpg', title: 'De Flecce', price: '$47,298', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
-            { id: 2, image: './image-deals-2.jpg', title: 'Party Every', price: '$18,983', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
-            { id: 3, image: './image-deals-3.jpg', title: 'Brown Hall', price: '$84,209', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
-            { id: 4, image: './image-deals-4.jpg', title: 'Mini Max', price: '$14,221', rating: '4.5/5', area: '529 sqft', capacity: 3, wifi: '10gb' },
-          ]
+            {
+              id: 1,
+              image: "./image-deals-1.jpg",
+              title: "De Flecce",
+              price: "$47,298",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+            {
+              id: 2,
+              image: "./image-deals-2.jpg",
+              title: "Party Every",
+              price: "$18,983",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+            {
+              id: 3,
+              image: "./image-deals-3.jpg",
+              title: "Brown Hall",
+              price: "$84,209",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+            {
+              id: 4,
+              image: "./image-deals-4.jpg",
+              title: "Mini Max",
+              price: "$14,221",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+            {
+              id: 5,
+              image: "./image-deals-1.jpg",
+              title: "De Flecce",
+              price: "$47,298",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+            {
+              id: 6,
+              image: "./image-deals-2.jpg",
+              title: "Party Every",
+              price: "$18,983",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+            {
+              id: 7,
+              image: "./image-deals-3.jpg",
+              title: "Brown Hall",
+              price: "$84,209",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+            {
+              id: 8,
+              image: "./image-deals-4.jpg",
+              title: "Mini Max",
+              price: "$14,221",
+              rating: "4.5/5",
+              area: "529 sqft",
+              capacity: 3,
+              wifi: "10gb",
+            },
+          ];
 
-          const dealList = document.querySelector('.deal-list');
-          const dealItem = document.querySelector('.deal-item');
+          const dealList = document.querySelector(".deal-list");
+          const dealItem = document.querySelector(".deal-item");
           dummyDeals.forEach((deal, index) => {
-            const newDealItem = index !== 0 ? dealItem.cloneNode(true) : dealItem;
-            newDealItem.querySelector('.deal-wrapper').style.backgroundImage = `url(${deal.image})`;
-            newDealItem.querySelector('.deal-name').textContent = deal.title;
-            newDealItem.querySelector('.deal-price').textContent = deal.price;
-            newDealItem.querySelector('.deal-rating').textContent = deal.rating;
-            newDealItem.querySelector('.deal-area').textContent = deal.area;
-            newDealItem.querySelector('.deal-capacity').textContent = deal.capacity;
-            newDealItem.querySelector('.deal-wifi').textContent = deal.wifi;
+            const newDealItem =
+              index !== 0 ? dealItem.cloneNode(true) : dealItem;
+            newDealItem.querySelector(
+              ".deal-wrapper"
+            ).style.backgroundImage = `url(${deal.image})`;
+            newDealItem.querySelector(".deal-name").textContent = deal.title;
+            newDealItem.querySelector(".deal-price").textContent = deal.price;
+            newDealItem.querySelector(".deal-rating").textContent = deal.rating;
+            newDealItem.querySelector(".deal-area").textContent = deal.area;
+            newDealItem.querySelector(".deal-capacity").textContent =
+              deal.capacity;
+            newDealItem.querySelector(".deal-wifi").textContent = deal.wifi;
             dealList.appendChild(newDealItem);
           });
         })();
@@ -469,23 +972,63 @@
         // handle categories data
         (function () {
           const dummyCategories = [
-            { id: 1, icon: './icon-cat-1.svg', title: 'Star Hills', total: '18,394' },
-            { id: 2, icon: './icon-cat-2.svg', title: 'Apartment', total: '18,394' },
-            { id: 3, icon: './icon-cat-3.svg', title: 'Nearby City', total: '18,394' },
-            { id: 4, icon: './icon-cat-4.svg', title: 'Landed House', total: '18,394' },
-            { id: 5, icon: './icon-cat-5.svg', title: 'Airport', total: '18,394' },
-            { id: 6, icon: './icon-cat-6.svg', title: 'Awards', total: '18,394' },
-            { id: 7, icon: './icon-cat-7.svg', title: 'Sunset', total: '18,394' },
-            { id: 8, icon: './icon-cat-8.svg', title: 'Others', total: '18,394' },
-          ]
+            {
+              id: 1,
+              icon: "./icon-cat-1.svg",
+              title: "Star Hills",
+              total: "18,394",
+            },
+            {
+              id: 2,
+              icon: "./icon-cat-2.svg",
+              title: "Apartment",
+              total: "18,394",
+            },
+            {
+              id: 3,
+              icon: "./icon-cat-3.svg",
+              title: "Nearby City",
+              total: "18,394",
+            },
+            {
+              id: 4,
+              icon: "./icon-cat-4.svg",
+              title: "Landed House",
+              total: "18,394",
+            },
+            {
+              id: 5,
+              icon: "./icon-cat-5.svg",
+              title: "Airport",
+              total: "18,394",
+            },
+            {
+              id: 6,
+              icon: "./icon-cat-6.svg",
+              title: "Awards",
+              total: "18,394",
+            },
+            {
+              id: 7,
+              icon: "./icon-cat-7.svg",
+              title: "Sunset",
+              total: "18,394",
+            },
+            {
+              id: 8,
+              icon: "./icon-cat-8.svg",
+              title: "Others",
+              total: "18,394",
+            },
+          ];
 
-          const catList = document.querySelector('.cat-list');
-          const catItem = document.querySelector('.cat-item');
+          const catList = document.querySelector(".cat-list");
+          const catItem = document.querySelector(".cat-item");
           dummyCategories.forEach((cat, index) => {
             const newCatItem = index !== 0 ? catItem.cloneNode(true) : catItem;
-            newCatItem.querySelector('img').src = cat.icon;
-            newCatItem.querySelector('h4').textContent = cat.title;
-            newCatItem.querySelector('span').textContent = cat.total;
+            newCatItem.querySelector("img").src = cat.icon;
+            newCatItem.querySelector("h4").textContent = cat.title;
+            newCatItem.querySelector("span").textContent = cat.total;
             catList.appendChild(newCatItem);
           });
         })();
@@ -493,19 +1036,42 @@
         // handle benefits data
         (function () {
           const dummyBenefits = [
-            { id: 1, image: './image-ben-1.jpg', title: 'House for Office and Living', count: '18,309' },
-            { id: 2, image: './image-ben-2.jpg', title: 'House Nearby with Mall', count: '18,309' },
-            { id: 3, image: './image-ben-3.jpg', title: 'House Historical Building', count: '18,309' },
-            { id: 4, image: './image-ben-4.jpg', title: 'Landed House with Park', count: '18,309' },
-          ]
+            {
+              id: 1,
+              image: "./image-ben-1.jpg",
+              title: "House for Office and Living",
+              count: "18,309",
+            },
+            {
+              id: 2,
+              image: "./image-ben-2.jpg",
+              title: "House Nearby with Mall",
+              count: "18,309",
+            },
+            {
+              id: 3,
+              image: "./image-ben-3.jpg",
+              title: "House Historical Building",
+              count: "18,309",
+            },
+            {
+              id: 4,
+              image: "./image-ben-4.jpg",
+              title: "Landed House with Park",
+              count: "18,309",
+            },
+          ];
 
-          const benefitList = document.querySelector('.benefit-list');
-          const benefitItem = document.querySelector('.benefit-item');
+          const benefitList = document.querySelector(".benefit-list");
+          const benefitItem = document.querySelector(".benefit-item");
           dummyBenefits.forEach((benefit, index) => {
-            const newBenefitItem = index !== 0 ? benefitItem.cloneNode(true) : benefitItem;
-            newBenefitItem.querySelector('.benefit-wrapper').style.backgroundImage = `url(${benefit.image})`;
-            newBenefitItem.querySelector('h4').textContent = benefit.title;
-            newBenefitItem.querySelector('span').textContent = benefit.count;
+            const newBenefitItem =
+              index !== 0 ? benefitItem.cloneNode(true) : benefitItem;
+            newBenefitItem.querySelector(
+              ".benefit-wrapper"
+            ).style.backgroundImage = `url(${benefit.image})`;
+            newBenefitItem.querySelector("h4").textContent = benefit.title;
+            newBenefitItem.querySelector("span").textContent = benefit.count;
             benefitList.appendChild(newBenefitItem);
           });
         })();
@@ -522,13 +1088,14 @@
             "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
             "It’s just amazing, will be back.",
             "I was not so sure if there was a beautiful bedroom, but it was really great experience.",
-          ]
+          ];
 
-          const testiList = document.querySelector('.testi-list');
-          const testiCard = document.querySelector('.testi-card');
+          const testiList = document.querySelector(".testi-list");
+          const testiCard = document.querySelector(".testi-card");
           dummyTestimonials.forEach((testi, index) => {
-            const newTestiCard = index !== 0 ? testiCard.cloneNode(true) : testiCard;
-            newTestiCard.querySelector('.testi-comment').textContent = testi;
+            const newTestiCard =
+              index !== 0 ? testiCard.cloneNode(true) : testiCard;
+            newTestiCard.querySelector(".testi-comment").textContent = testi;
             testiList.appendChild(newTestiCard);
           });
         })();
