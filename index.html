@@ -82,7 +82,7 @@
               Sign Up
             </button>
           </div>
-          <button class="hamburger-menu lg:hidden">
+          <button class="hamburger-menu lg:hidden" aria-label="Hamburger Menu">
             <div
               class="flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all !ring-0 outline-none ring-gray-300 hover:ring-8 focus:ring-4 ring-opacity-30 duration-200"
             >
@@ -106,7 +106,7 @@
     </header>
 
     <aside
-      class="drawer-menu opacity-0 lg:hidden z-10 fixed top-0 right-0 left-0 w-full bg-dark bg-opacity-0 flex items-center justify-center transition-all -translate-y-[100%] pt-[180px] pb-[50px]"
+      class="drawer-menu opacity-0 lg:hidden z-10 fixed top-0 right-0 left-0 w-full bg-dark bg-opacity-0 flex flex-col gap-[30px] items-center justify-center transition-all -translate-y-[100%] pt-[180px] pb-[50px]"
     >
       <ul class="flex flex-col items-center gap-[30px]">
         <li class="font-semibold hover:underline">
@@ -121,19 +121,19 @@
         <li class="font-semibold hover:underline">
           <a href="#">About</a>
         </li>
-        <div class="flex items-center gap-[12px]">
-          <button
-            class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
-          >
-            Sign In
-          </button>
-          <button
-            class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
-          >
-            Sign Up
-          </button>
-        </div>
       </ul>
+      <div class="flex items-center gap-[12px]">
+        <button
+          class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+        >
+          Sign In
+        </button>
+        <button
+          class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
+        >
+          Sign Up
+        </button>
+      </div>
     </aside>
 
     <main>
@@ -345,7 +345,7 @@
                   class="shrink-0"
                 />
                 <div class="grow">
-                  <h4 class="text-white text-[20px] font-bold">Star Hills</h4>
+                  <h3 class="text-white text-[20px] font-bold">Star Hills</h3>
                   <span class="text-steel">18,394</span>
                 </div>
               </div>
@@ -1082,7 +1082,7 @@
           dummyCategories.forEach((cat, index) => {
             const newCatItem = index !== 0 ? catItem.cloneNode(true) : catItem;
             newCatItem.querySelector("img").src = cat.icon;
-            newCatItem.querySelector("h4").textContent = cat.title;
+            newCatItem.querySelector("h3").textContent = cat.title;
             newCatItem.querySelector("span").textContent = cat.total;
             catList.appendChild(newCatItem);
           });
