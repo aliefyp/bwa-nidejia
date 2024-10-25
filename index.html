@@ -62,7 +62,7 @@
               <a href="#testimonials">Testimonials</a>
             </li>
             <li class="font-semibold hover:underline">
-              <a href="#benefits">About</a>
+              <a href="#">About</a>
             </li>
           </ul>
           <div class="hidden lg:flex items-center gap-[12px]">
@@ -114,7 +114,7 @@
           <a href="#testimonials">Testimonials</a>
         </li>
         <li class="font-semibold hover:underline">
-          <a href="#benefits">About</a>
+          <a href="#">About</a>
         </li>
         <div class="flex items-center gap-[12px]">
           <button
@@ -358,30 +358,60 @@
                 Huge Benefits That<br />Make You Feel Happier
               </h2>
               <ul class="space-y-[24px]">
-                <li
-                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
-                >
-                  Checking faster without depositing
+                <li class="flex items-center gap-[12px]">
+                  <img
+                    src="./icon-check.svg"
+                    alt="Check Icon"
+                    aria-label="Check Icon"
+                    width="32"
+                    height="32"
+                    class="shrink-0"
+                  />
+                  <span>Checking faster without depositing</span>
                 </li>
-                <li
-                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
-                >
-                  24/7 security guarding your place
+                <li class="flex items-center gap-[12px]">
+                  <img
+                    src="./icon-check.svg"
+                    alt="Check Icon"
+                    aria-label="Check Icon"
+                    width="32"
+                    height="32"
+                    class="shrink-0"
+                  />
+                  <span>24/7 security guarding your place</span>
                 </li>
-                <li
-                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
-                >
-                  Fast-internet access without lagging
+                <li class="flex items-center gap-[12px]">
+                  <img
+                    src="./icon-check.svg"
+                    alt="Check Icon"
+                    aria-label="Check Icon"
+                    width="32"
+                    height="32"
+                    class="shrink-0"
+                  />
+                  <span>Fast-internet access without lagging</span>
                 </li>
-                <li
-                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
-                >
-                  High standard of layout of houses
+                <li class="flex items-center gap-[12px]">
+                  <img
+                    src="./icon-check.svg"
+                    alt="Check Icon"
+                    aria-label="Check Icon"
+                    width="32"
+                    height="32"
+                    class="shrink-0"
+                  />
+                  <span>High standard of layout of houses</span>
                 </li>
-                <li
-                  class="pl-[44px] font-bold bg-[url('./icon-check.svg')] bg-no-repeat bg-contain bg-left bg-center bg-[32px]"
-                >
-                  All other benefits, we promise
+                <li class="flex items-center gap-[12px]">
+                  <img
+                    src="./icon-check.svg"
+                    alt="Check Icon"
+                    aria-label="Check Icon"
+                    width="32"
+                    height="32"
+                    class="shrink-0"
+                  />
+                  <span>All other benefits, we promise</span>
                 </li>
               </ul>
               <div class="flex items-center gap-[12px]">
@@ -443,7 +473,7 @@
 
       <!-- Section Testimonials -->
       <section id="testimonials">
-        <div class="container">
+        <div class="container pt-[16px] pb-[100px]">
           <div class="flex flex-col items-center justify-center">
             <h2 class="text-white text-[28px] font-bold">Happy Customers</h2>
             <p class="text-steel">We’d love to come back again soon</p>
@@ -521,7 +551,7 @@
       </section>
     </main>
 
-    <footer>
+    <footer class="bg-dark">
       <div class="container py-[100px] flex flex-col gap-[50px]">
         <div class="flex flex-wrap gap-[50px] py-[50px]">
           <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
@@ -797,6 +827,21 @@
         testiExpand.addEventListener("click", () => {
           testiExpand.remove();
           testiWrapper.classList.remove("max-h-[700px]");
+        });
+
+        // handle anchor link
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+
+            const targetElement = document.querySelector(
+              this.getAttribute("href")
+            );
+            window.scrollTo({
+              top: targetElement.offsetTop - navbar.offsetHeight,
+              behavior: "smooth",
+            });
+          });
         });
 
         // handle outside click
