@@ -1,8 +1,12 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Dolor house comfortable si amet with cheap price that also lorem when you need grow."
+    />
     <title>Nidejia - Glorious Living and Loving Space</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -192,11 +196,11 @@
                 />
               </div>
               <div>
-                <h3
+                <h2
                   class="text-white font-extrabold text-[20px] lg:text-[28px]"
                 >
                   382M
-                </h3>
+                </h2>
                 <span class="text-steel text-[12px] lg:text-[16px]"
                   >Kos Available</span
                 >
@@ -250,11 +254,11 @@
                   >
                     <div class="flex items-center justify-between">
                       <div>
-                        <h4
+                        <h3
                           class="deal-name text-[20px] text-ellipsis overflow-hidden font-bold"
                         >
                           De Flecce
-                        </h4>
+                        </h3>
                         <span
                           ><strong class="deal-price">$47,298</strong>/mo</span
                         >
@@ -559,7 +563,7 @@
         <div class="flex flex-wrap gap-[50px] py-[50px]">
           <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
             <div class="space-y-[12px]">
-              <h5 class="font-semibold">Solutions</h5>
+              <span class="font-semibold">Solutions</span>
               <ul class="space-y-[12px]">
                 <li class="text-steel hover:text-brand hover:font-semibold">
                   <a href="#">Credit Rewards</a>
@@ -581,7 +585,7 @@
           </div>
           <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
             <div class="space-y-[12px]">
-              <h5 class="font-semibold">Product</h5>
+              <span class="font-semibold">Product</span>
               <ul class="space-y-[12px]">
                 <li class="text-steel hover:text-brand hover:font-semibold">
                   <a href="#">Featured House</a>
@@ -603,7 +607,7 @@
           </div>
           <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
             <div class="space-y-[12px]">
-              <h5 class="font-semibold">Company</h5>
+              <span class="font-semibold">Company</span>
               <ul class="space-y-[12px]">
                 <li class="text-steel hover:text-brand hover:font-semibold">
                   <a href="#">About Us</a>
@@ -626,7 +630,7 @@
           <div class="w-full lg:w-auto grow">
             <div class="space-y-[30px]">
               <div class="space-y-[12px]">
-                <h5 class="font-semibold">Subscribe & Free Rewards</h5>
+                <span class="font-semibold">Subscribe & Free Rewards</span>
                 <form>
                   <div
                     class="rounded-full overflow-hidden w-full flex items-center bg-white gap-[8px] pl-[20px]"
@@ -655,7 +659,7 @@
                 </form>
               </div>
               <div class="space-y-[12px]">
-                <h5 class="font-semibold">Choose Language</h5>
+                <span class="font-semibold block">Choose Language</span>
                 <div
                   class="lang-wrapper flex items-center gap-[10px] cursor-pointer relative p-2 inline-flex"
                 >
@@ -671,6 +675,7 @@
                     readonly
                     class="text-[16px] bg-transparent text-white outline-none cursor-pointer"
                     value="English (UK)"
+                    aria-label="Language"
                   />
                   <img
                     src="./icon-chevron-down.svg"
@@ -909,7 +914,7 @@
             const newStatsItem =
               index !== 0 ? statsItem.cloneNode(true) : statsItem;
             newStatsItem.querySelector("img").src = stat.icon;
-            newStatsItem.querySelector("h3").textContent = stat.title;
+            newStatsItem.querySelector("h2").textContent = stat.title;
             newStatsItem.querySelector("span").textContent = stat.desc;
             statsList.appendChild(newStatsItem);
           });
