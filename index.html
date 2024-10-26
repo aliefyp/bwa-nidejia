@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
@@ -34,20 +34,20 @@
     <style type="text/tailwindcss">
       @layer component {
         .container {
-          @apply max-w-screen-lg mx-auto px-[16px];
+          @apply mx-auto max-w-screen-lg px-[16px];
         }
       }
     </style>
   </head>
-  <body class="bg-black text-white font-['Poppins']">
+  <body class="bg-black font-['Poppins'] text-white">
     <header
-      class="fixed top-[30px] left-[50%] -translate-x-1/2 w-full z-20 transition-all"
+      class="fixed left-[50%] top-[30px] z-20 w-full -translate-x-1/2 transition-all"
     >
       <div class="container">
         <nav
-          class="navbar w-full rounded-[20px] bg-dark text-white px-[30px] py-[24px] flex justify-between items-center"
+          class="navbar bg-dark flex w-full items-center justify-between rounded-[20px] px-[30px] py-[24px] text-white"
         >
-          <div class="flex items-center gap-[10px] font-extrabold text-[24px]">
+          <div class="flex items-center gap-[10px] text-[24px] font-extrabold">
             <img
               src="./assets/logo-main.svg"
               alt="Nidejia Logo"
@@ -57,7 +57,7 @@
             />
             <span>Nidejia</span>
           </div>
-          <ul class="hidden lg:flex items-center gap-[30px]">
+          <ul class="hidden items-center gap-[30px] lg:flex">
             <li class="font-semibold hover:underline">
               <a href="#deals">Featured</a>
             </li>
@@ -71,33 +71,33 @@
               <a href="#">About</a>
             </li>
           </ul>
-          <div class="hidden lg:flex items-center gap-[12px]">
+          <div class="hidden items-center gap-[12px] lg:flex">
             <button
-              class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+              class="text-dark bg-brand rounded-full px-[24px] py-[12px] font-semibold hover:bg-opacity-80"
             >
               Sign In
             </button>
             <button
-              class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
+              class="bg-secondary rounded-full px-[24px] py-[12px] font-semibold text-white hover:bg-opacity-80"
             >
               Sign Up
             </button>
           </div>
           <button class="hamburger-menu lg:hidden" aria-label="Hamburger Menu">
             <div
-              class="flex overflow-hidden items-center justify-center rounded-full w-[50px] h-[50px] transform transition-all !ring-0 outline-none ring-gray-300 hover:ring-8 focus:ring-4 ring-opacity-30 duration-200"
+              class="flex h-[50px] w-[50px] transform items-center justify-center overflow-hidden rounded-full outline-none !ring-0 ring-gray-300 ring-opacity-30 transition-all duration-200 hover:ring-8 focus:ring-4"
             >
               <div
-                class="flex flex-col justify-between w-[20px] h-[20px] transform transition-all duration-300 origin-center overflow-hidden"
+                class="flex h-[20px] w-[20px] origin-center transform flex-col justify-between overflow-hidden transition-all duration-300"
               >
                 <span
-                  class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"
+                  class="h-[2px] w-7 origin-left transform bg-white transition-all duration-300"
                 ></span>
                 <span
-                  class="bg-white h-[2px] w-1/2 rounded transform transition-all duration-300"
+                  class="h-[2px] w-1/2 transform rounded bg-white transition-all duration-300"
                 ></span>
                 <span
-                  class="bg-white h-[2px] w-7 transform transition-all duration-300 origin-left"
+                  class="h-[2px] w-7 origin-left transform bg-white transition-all duration-300"
                 ></span>
               </div>
             </div>
@@ -107,7 +107,7 @@
     </header>
 
     <aside
-      class="drawer-menu opacity-0 lg:hidden z-10 fixed top-0 right-0 left-0 w-full bg-dark bg-opacity-0 flex flex-col gap-[30px] items-center justify-center transition-all -translate-y-[100%] pt-[180px] pb-[50px]"
+      class="drawer-menu bg-dark fixed left-0 right-0 top-0 z-10 flex w-full -translate-y-[100%] flex-col items-center justify-center gap-[30px] bg-opacity-0 pb-[50px] pt-[180px] opacity-0 transition-all lg:hidden"
     >
       <ul class="flex flex-col items-center gap-[30px]">
         <li class="font-semibold hover:underline">
@@ -125,12 +125,12 @@
       </ul>
       <div class="flex items-center gap-[12px]">
         <button
-          class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+          class="text-dark bg-brand rounded-full px-[24px] py-[12px] font-semibold hover:bg-opacity-80"
         >
           Sign In
         </button>
         <button
-          class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
+          class="bg-secondary rounded-full px-[24px] py-[12px] font-semibold text-white hover:bg-opacity-80"
         >
           Sign Up
         </button>
@@ -140,31 +140,31 @@
     <main>
       <!-- Section Hero -->
       <section>
-        <div class="bg-[url('./assets/hero-bg_1x.webp')] bg-center bg-cover">
+        <div class="bg-[url('./assets/hero-bg_1x.webp')] bg-cover bg-center">
           <div class="bg-gradient-to-r from-black to-transparent">
-            <div class="container pt-[200px] pb-[200px]">
+            <div class="container pb-[200px] pt-[200px]">
               <div class="max-w-xl">
-                <h1 class="text-white text-[55px] font-extrabold">
+                <h1 class="text-[55px] font-extrabold text-white">
                   Find Glorious Living and Loving Space
                 </h1>
-                <p class="text-white text-[18px] leading-[32px] mt-[10px]">
+                <p class="mt-[10px] text-[18px] leading-[32px] text-white">
                   Dolor house comfortable si amet with cheap price that also
                   lorem when you need grow.
                 </p>
                 <form>
                   <div
-                    class="rounded-full overflow-hidden w-full flex items-center bg-dark h-[70px] mt-[50px]"
+                    class="bg-dark mt-[50px] flex h-[70px] w-full items-center overflow-hidden rounded-full"
                   >
                     <input
                       type="search"
                       name="city"
                       autocomplete="off"
                       placeholder="Search by city or country..."
-                      class="text-[20px] bg-transparent w-full text-white outline-none px-[30px] grow [&::-webkit-search-cancel-button]:hidden"
+                      class="w-full grow bg-transparent px-[30px] text-[20px] text-white outline-none [&::-webkit-search-cancel-button]:hidden"
                     />
                     <button
                       type="submit"
-                      class="font-semibold text-dark bg-brand px-[20px] md:px-[40px] h-full shrink-0 hover:bg-opacity-80"
+                      class="text-dark bg-brand h-full shrink-0 px-[20px] font-semibold hover:bg-opacity-80 md:px-[40px]"
                     >
                       Explore Now
                     </button>
@@ -180,13 +180,13 @@
       <section>
         <div class="container relative pt-0">
           <div
-            class="stats-list bg-dark grid grid-cols-2 lg:grid-cols-4 rounded-[20px] translate-y-[-75px] w-full"
+            class="stats-list bg-dark grid w-full translate-y-[-75px] grid-cols-2 rounded-[20px] lg:grid-cols-4"
           >
             <div
-              class="stats-item flex items-center gap-[16px] px-[24px] lg:px-[50px] my-[30px] lg:border-r border-[#353535] last:border-none odd:border-r"
+              class="stats-item my-[30px] flex items-center gap-[16px] border-[#353535] px-[24px] last:border-none odd:border-r lg:border-r lg:px-[50px]"
             >
               <div
-                class="bg-brand w-[40px] lg:w-[70px] h-[40px] lg:h-[70px] shrink-0 rounded-full flex items-center justify-center"
+                class="bg-brand flex h-[40px] w-[40px] shrink-0 items-center justify-center rounded-full lg:h-[70px] lg:w-[70px]"
               >
                 <img
                   src="./assets/icon-stats-1.svg"
@@ -198,7 +198,7 @@
               </div>
               <div>
                 <h2
-                  class="text-white font-extrabold text-[20px] lg:text-[28px]"
+                  class="text-[20px] font-extrabold text-white lg:text-[28px]"
                 >
                   382M
                 </h2>
@@ -213,16 +213,16 @@
 
       <!-- Section Latest Deals -->
       <section id="deals">
-        <div class="container pt-[50px] pb-[100px]">
+        <div class="container pb-[100px] pt-[50px]">
           <div class="flex flex-col items-center justify-center">
-            <h2 class="text-white text-[28px] font-bold">Our Latest Deals</h2>
+            <h2 class="text-[28px] font-bold text-white">Our Latest Deals</h2>
             <p class="text-steel">
               Explore the beauty of architecture and living love
             </p>
           </div>
           <div class="relative">
             <button
-              class="deal-prev w-[50px] h-[50px] hover:scale-105 transition-transform absolute left-0 top-[72px] transform translate-x-[-50%] bg-dark rounded-full flex items-center justify-center shadow-lg z-10"
+              class="deal-prev bg-dark absolute left-0 top-[72px] z-10 flex h-[50px] w-[50px] translate-x-[-50%] transform items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105"
             >
               <img
                 src="./assets/icon-chevron-left.svg"
@@ -233,7 +233,7 @@
               />
             </button>
             <button
-              class="deal-next w-[50px] h-[50px] hover:scale-105 transition-transform absolute right-0 top-[72px] transform translate-x-[50%] bg-dark rounded-full flex items-center justify-center shadow-lg z-10"
+              class="deal-next bg-dark absolute right-0 top-[72px] z-10 flex h-[50px] w-[50px] translate-x-[50%] transform items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105"
             >
               <img
                 src="./assets/icon-chevron-right.svg"
@@ -243,20 +243,20 @@
                 height="20"
               />
             </button>
-            <div class="deal-list flex mt-[30px] overflow-hidden">
+            <div class="deal-list mt-[30px] flex overflow-hidden">
               <div
-                class="deal-item pr-[30px] shrink-0 w-[calc(100%+30px)] sm:w-[calc((100%+30px)/2)] lg:w-[calc((100%+30px)/4)]"
+                class="deal-item w-[calc(100%+30px)] shrink-0 pr-[30px] sm:w-[calc((100%+30px)/2)] lg:w-[calc((100%+30px)/4)]"
               >
                 <div
-                  class="deal-wrapper rounded-[24px] h-[200px] sm:h-[350px] bg-[url(./assets/image-deals-1.webp)] bg-cover bg-center relative group"
+                  class="deal-wrapper group relative h-[200px] rounded-[24px] bg-[url(./assets/image-deals-1.webp)] bg-cover bg-center sm:h-[350px]"
                 >
                   <div
-                    class="bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] absolute left-0 right-0 bottom-0 group-hover:from-10% transition-all p-[20px]"
+                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] p-[20px] transition-all group-hover:from-10%"
                   >
                     <div class="flex items-center justify-between">
                       <div>
                         <h3
-                          class="deal-name text-[20px] text-ellipsis overflow-hidden font-bold"
+                          class="deal-name overflow-hidden text-ellipsis text-[20px] font-bold"
                         >
                           De Flecce
                         </h3>
@@ -276,7 +276,7 @@
                       </div>
                     </div>
                     <div class="flex items-center justify-between">
-                      <div class="flex items-center gap-[2px] mt-[14px]">
+                      <div class="mt-[14px] flex items-center gap-[2px]">
                         <img
                           src="./assets/icon-sqm.svg"
                           alt="Area"
@@ -286,7 +286,7 @@
                         />
                         <span class="deal-area">529 sqft</span>
                       </div>
-                      <div class="flex items-center gap-[2px] mt-[14px]">
+                      <div class="mt-[14px] flex items-center gap-[2px]">
                         <img
                           src="./assets/icon-users.svg"
                           alt="Capacity"
@@ -296,7 +296,7 @@
                         />
                         <span class="deal-capacity">3</span>
                       </div>
-                      <div class="flex items-center gap-[2px] mt-[14px]">
+                      <div class="mt-[14px] flex items-center gap-[2px]">
                         <img
                           src="./assets/icon-wifi.svg"
                           alt="Wifi"
@@ -317,25 +317,25 @@
 
       <!-- Section Categories -->
       <section id="categories" class="bg-dark">
-        <div class="container py-[50px] space-y-[30px]">
+        <div class="container space-y-[30px] py-[50px]">
           <div class="flex items-center justify-between">
             <div>
-              <h2 class="text-white text-[28px] font-bold">Categories</h2>
+              <h2 class="text-[28px] font-bold text-white">Categories</h2>
               <p class="text-steel">We provide everything</p>
             </div>
             <button
-              class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+              class="text-dark bg-brand rounded-full px-[24px] py-[12px] font-semibold hover:bg-opacity-80"
             >
               Explore All
             </button>
           </div>
 
           <div
-            class="cat-list grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-[16px] sm:gap-[30px]"
+            class="cat-list grid grid-cols-1 gap-[16px] sm:grid-cols-2 sm:gap-[30px] lg:grid-cols-4"
           >
             <a class="cat-item" href="#">
               <div
-                class="bg-dark2 rounded-[20px] px-[20px] py-[16px] flex items-center justify-between gap-[16px] hover:scale-105 transition-transform"
+                class="bg-dark2 flex items-center justify-between gap-[16px] rounded-[20px] px-[20px] py-[16px] transition-transform hover:scale-105"
               >
                 <img
                   src="./assets/icon-cat-1.svg"
@@ -346,7 +346,7 @@
                   class="shrink-0"
                 />
                 <div class="grow">
-                  <h3 class="text-white text-[20px] font-bold">Star Hills</h3>
+                  <h3 class="text-[20px] font-bold text-white">Star Hills</h3>
                   <span class="text-steel">18,394</span>
                 </div>
               </div>
@@ -358,9 +358,9 @@
       <!-- Section Benefits -->
       <section id="benefits">
         <div class="container py-[100px]">
-          <div class="grid grid-cols-1 lg:grid-cols-12 gap-[50px]">
-            <div class="col-span-1 lg:col-span-5 space-y-[30px]">
-              <h2 class="text-white text-[28px] font-bold">
+          <div class="grid grid-cols-1 gap-[50px] lg:grid-cols-12">
+            <div class="col-span-1 space-y-[30px] lg:col-span-5">
+              <h2 class="text-[28px] font-bold text-white">
                 Huge Benefits That<br />Make You Feel Happier
               </h2>
               <ul class="space-y-[24px]">
@@ -422,7 +422,7 @@
               </ul>
               <div class="flex items-center gap-[12px]">
                 <button
-                  class="py-[12px] px-[24px] rounded-full text-dark bg-brand hover:bg-opacity-80 font-semibold"
+                  class="text-dark bg-brand rounded-full px-[24px] py-[12px] font-semibold hover:bg-opacity-80"
                 >
                   <div class="flex items-center gap-[8px]">
                     <img
@@ -436,7 +436,7 @@
                   </div>
                 </button>
                 <button
-                  class="py-[12px] px-[24px] rounded-full text-white bg-secondary hover:bg-opacity-80 font-semibold"
+                  class="bg-secondary rounded-full px-[24px] py-[12px] font-semibold text-white hover:bg-opacity-80"
                 >
                   All Benefits
                 </button>
@@ -444,20 +444,20 @@
             </div>
             <div class="col-span-1 lg:col-span-7">
               <div
-                class="benefit-list grid grid-cols-1 md:grid-cols-2 gap-[30px]"
+                class="benefit-list grid grid-cols-1 gap-[30px] md:grid-cols-2"
               >
                 <a class="benefit-item" href="#">
                   <div
-                    class="benefit-wrapper rounded-[24px] h-[200px] bg-[url(./assets/image-ben-1.webp)] bg-cover relative group"
+                    class="benefit-wrapper group relative h-[200px] rounded-[24px] bg-[url(./assets/image-ben-1.webp)] bg-cover"
                   >
                     <div
-                      class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0"
+                      class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent from-30% to-[#050211] p-[20px] transition-all group-hover:from-10%"
                     >
                       <div class="flex items-center justify-between gap-[16px]">
-                        <h3 class="text-[20px] font-bold grow">
+                        <h3 class="grow text-[20px] font-bold">
                           House for Office and Living
                         </h3>
-                        <div class="flex gap-[2px] shrink-0">
+                        <div class="flex shrink-0 gap-[2px]">
                           <img
                             src="./assets/icon-users.svg"
                             alt="Rating"
@@ -480,19 +480,19 @@
 
       <!-- Section Testimonials -->
       <section id="testimonials">
-        <div class="container pt-[16px] pb-[100px]">
+        <div class="container pb-[100px] pt-[16px]">
           <div class="flex flex-col items-center justify-center">
-            <h2 class="text-white text-[28px] font-bold">Happy Customers</h2>
+            <h2 class="text-[28px] font-bold text-white">Happy Customers</h2>
             <p class="text-steel">We’d love to come back again soon</p>
           </div>
           <div
-            class="testi-wrapper relative max-h-[700px] lg:max-h-none overflow-hidden"
+            class="testi-wrapper relative max-h-[700px] overflow-hidden lg:max-h-none"
           >
             <ul
-              class="testi-list columns-1 md:column-2 lg:columns-3 gap-[16px] sm:gap-[30px] space-y-[16px] sm:space-y-[30px] mt-[30px]"
+              class="testi-list md:column-2 mt-[30px] columns-1 gap-[16px] space-y-[16px] sm:gap-[30px] sm:space-y-[30px] lg:columns-3"
             >
               <li
-                class="testi-card bg-dark2 rounded-[20px] px-[20px] py-[16px] space-y-[20px] break-inside-avoid-column"
+                class="testi-card bg-dark2 break-inside-avoid-column space-y-[20px] rounded-[20px] px-[20px] py-[16px]"
               >
                 <div class="flex items-center">
                   <img
@@ -548,7 +548,7 @@
               </li>
             </ul>
             <div
-              class="testi-expand lg:hidden absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black from-20% to-transparent flex items-center justify-center p-[30px] cursor-pointer"
+              class="testi-expand absolute bottom-0 left-0 right-0 flex cursor-pointer items-center justify-center bg-gradient-to-t from-black from-20% to-transparent p-[30px] lg:hidden"
             >
               <span class="text-brand font-semibold"
                 >View All Testimonials</span
@@ -560,9 +560,9 @@
     </main>
 
     <footer class="bg-dark">
-      <div class="container py-[100px] flex flex-col gap-[50px]">
+      <div class="container flex flex-col gap-[50px] py-[100px]">
         <div class="flex flex-wrap gap-[50px] py-[50px]">
-          <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
+          <div class="w-full min-w-[180px] shrink-0 lg:w-auto">
             <div class="space-y-[12px]">
               <span class="font-semibold">Solutions</span>
               <ul class="space-y-[12px]">
@@ -584,7 +584,7 @@
               </ul>
             </div>
           </div>
-          <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
+          <div class="w-full min-w-[180px] shrink-0 lg:w-auto">
             <div class="space-y-[12px]">
               <span class="font-semibold">Product</span>
               <ul class="space-y-[12px]">
@@ -606,7 +606,7 @@
               </ul>
             </div>
           </div>
-          <div class="w-full lg:w-auto shrink-0 min-w-[180px]">
+          <div class="w-full min-w-[180px] shrink-0 lg:w-auto">
             <div class="space-y-[12px]">
               <span class="font-semibold">Company</span>
               <ul class="space-y-[12px]">
@@ -628,13 +628,13 @@
               </ul>
             </div>
           </div>
-          <div class="w-full lg:w-auto grow">
+          <div class="w-full grow lg:w-auto">
             <div class="space-y-[30px]">
               <div class="space-y-[12px]">
                 <span class="font-semibold">Subscribe & Free Rewards</span>
                 <form>
                   <div
-                    class="rounded-full overflow-hidden w-full flex items-center bg-white gap-[8px] pl-[20px]"
+                    class="flex w-full items-center gap-[8px] overflow-hidden rounded-full bg-white pl-[20px]"
                   >
                     <img
                       src="./assets/icon-mail.svg"
@@ -648,11 +648,11 @@
                       type="email"
                       name="mail"
                       placeholder="Email Address"
-                      class="text-[16px] bg-transparent w-full text-black outline-none grow"
+                      class="w-full grow bg-transparent text-[16px] text-black outline-none"
                     />
                     <button
                       type="submit"
-                      class="font-semibold text-dark bg-brand px-[24px] py-[12px] h-full shrink-0 hover:bg-opacity-80 rounded-full"
+                      class="text-dark bg-brand h-full shrink-0 rounded-full px-[24px] py-[12px] font-semibold hover:bg-opacity-80"
                     >
                       Subscribe
                     </button>
@@ -660,9 +660,9 @@
                 </form>
               </div>
               <div class="space-y-[12px]">
-                <span class="font-semibold block">Choose Language</span>
+                <span class="block font-semibold">Choose Language</span>
                 <div
-                  class="lang-wrapper flex items-center gap-[10px] cursor-pointer relative p-2 inline-flex"
+                  class="lang-wrapper relative flex inline-flex cursor-pointer items-center gap-[10px] p-2"
                 >
                   <img
                     src="./assets/icon-flag-uk.svg"
@@ -674,7 +674,7 @@
                   />
                   <input
                     readonly
-                    class="text-[16px] bg-transparent text-white outline-none cursor-pointer"
+                    class="cursor-pointer bg-transparent text-[16px] text-white outline-none"
                     value="English (UK)"
                     aria-label="Language"
                   />
@@ -688,11 +688,11 @@
                     loading="lazy"
                   />
                   <div
-                    class="lang-dropdown absolute top-[100%] left-0 rounded-[20px] shadow-lg h-0 opacity-0"
+                    class="lang-dropdown absolute left-0 top-[100%] h-0 rounded-[20px] opacity-0 shadow-lg"
                   >
                     <ul class="bg-dark2">
                       <li
-                        class="lang-option px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark"
+                        class="lang-option hover:bg-dark flex items-center gap-[8px] px-[20px] py-[12px]"
                       >
                         <img
                           src="./assets/icon-flag-uk.svg"
@@ -705,7 +705,7 @@
                         <span>English (UK)</span>
                       </li>
                       <li
-                        class="px-[20px] py-[12px] flex items-center gap-[8px] hover:bg-dark"
+                        class="hover:bg-dark flex items-center gap-[8px] px-[20px] py-[12px]"
                       >
                         <img
                           src="./assets/icon-flag-id.svg"
@@ -726,9 +726,9 @@
         </div>
         <div class="border-t border-[#353535]"></div>
         <div
-          class="flex items-center flex-wrap gap-[12px] justify-between w-full"
+          class="flex w-full flex-wrap items-center justify-between gap-[12px]"
         >
-          <div class="flex items-center gap-[10px] font-extrabold text-[24px]">
+          <div class="flex items-center gap-[10px] text-[24px] font-extrabold">
             <img
               src="./assets/logo-main.svg"
               alt="Nidejia Logo"
@@ -756,7 +756,7 @@
               "backdrop-blur-md",
               "bg-opacity-60",
               "shadow-lg",
-              "!py-[12px]"
+              "!py-[12px]",
             );
             header.classList.add("top-[10px]");
           } else {
@@ -764,7 +764,7 @@
               "backdrop-blur-md",
               "bg-opacity-60",
               "shadow-lg",
-              "!py-[12px]"
+              "!py-[12px]",
             );
             header.classList.remove("top-[10px]");
           }
@@ -846,7 +846,7 @@
             e.preventDefault();
 
             const targetElement = document.querySelector(
-              this.getAttribute("href")
+              this.getAttribute("href"),
             );
             window.scrollTo({
               top: targetElement.offsetTop - navbar.offsetHeight,
@@ -1011,9 +1011,8 @@
           dummyDeals.forEach((deal, index) => {
             const newDealItem =
               index !== 0 ? dealItem.cloneNode(true) : dealItem;
-            newDealItem.querySelector(
-              ".deal-wrapper"
-            ).style.backgroundImage = `url(${deal.image})`;
+            newDealItem.querySelector(".deal-wrapper").style.backgroundImage =
+              `url(${deal.image})`;
             newDealItem.querySelector(".deal-name").textContent = deal.title;
             newDealItem.querySelector(".deal-price").textContent = deal.price;
             newDealItem.querySelector(".deal-rating").textContent = deal.rating;
@@ -1124,7 +1123,7 @@
             const newBenefitItem =
               index !== 0 ? benefitItem.cloneNode(true) : benefitItem;
             newBenefitItem.querySelector(
-              ".benefit-wrapper"
+              ".benefit-wrapper",
             ).style.backgroundImage = `url(${benefit.image})`;
             newBenefitItem.querySelector("h3").textContent = benefit.title;
             newBenefitItem.querySelector("span").textContent = benefit.count;
