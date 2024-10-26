@@ -13,7 +13,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
-      rel="stylesheet"
+      rel="preload"
+      as="style"
     />
     <script>
       tailwind.config = {
@@ -453,9 +454,9 @@
                       class="bg-gradient-to-b from-transparent from-30% to-[#050211] bottom-0 group-hover:from-10% transition-all p-[20px] absolute left-0 right-0"
                     >
                       <div class="flex items-center justify-between gap-[16px]">
-                        <h4 class="text-[20px] font-bold grow">
+                        <h3 class="text-[20px] font-bold grow">
                           House for Office and Living
-                        </h4>
+                        </h3>
                         <div class="flex gap-[2px] shrink-0">
                           <img
                             src="./icon-users.svg"
@@ -1125,7 +1126,7 @@
             newBenefitItem.querySelector(
               ".benefit-wrapper"
             ).style.backgroundImage = `url(${benefit.image})`;
-            newBenefitItem.querySelector("h4").textContent = benefit.title;
+            newBenefitItem.querySelector("h3").textContent = benefit.title;
             newBenefitItem.querySelector("span").textContent = benefit.count;
             benefitList.appendChild(newBenefitItem);
           });
