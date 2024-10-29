@@ -16,10 +16,24 @@
       rel="preload"
       as="style"
     />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
-    <link rel="manifest" href="./assets/site.webmanifest">
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./assets/site.webmanifest" />
     <script>
       tailwind.config = {
         theme: {
@@ -45,7 +59,7 @@
   </head>
   <body class="bg-black font-['Poppins'] text-white">
     <header
-      class="fixed left-[50%] top-[30px] z-20 w-full -translate-x-1/2 transition-all"
+      class="fixed left-[50%] top-[30px] z-30 w-full -translate-x-1/2 transition-all"
     >
       <div class="container">
         <nav
@@ -77,12 +91,12 @@
           </ul>
           <div class="hidden items-center gap-[12px] lg:flex">
             <button
-              class="text-dark bg-brand rounded-full px-[24px] py-[12px] font-semibold hover:bg-opacity-80"
+              class="text-dark bg-brand cursor-pointer rounded-full px-[24px] py-[12px] font-semibold hover:bg-opacity-80"
             >
               Sign In
             </button>
             <button
-              class="bg-secondary rounded-full px-[24px] py-[12px] font-semibold text-white hover:bg-opacity-80"
+              class="bg-secondary cursor-pointer rounded-full px-[24px] py-[12px] font-semibold text-white hover:bg-opacity-80"
             >
               Sign Up
             </button>
@@ -111,7 +125,7 @@
     </header>
 
     <aside
-      class="drawer-menu bg-dark fixed left-0 right-0 top-0 z-10 flex w-full -translate-y-[100%] flex-col items-center justify-center gap-[30px] bg-opacity-0 pb-[50px] pt-[180px] opacity-0 transition-all lg:hidden"
+      class="drawer-menu bg-dark fixed left-0 right-0 top-0 -z-10 flex w-full -translate-y-[100%] flex-col items-center justify-center gap-[30px] bg-opacity-0 pb-[50px] pt-[180px] opacity-0 transition-all lg:hidden"
     >
       <ul class="flex flex-col items-center gap-[30px]">
         <li class="font-semibold hover:underline">
@@ -226,7 +240,7 @@
           </div>
           <div class="relative">
             <button
-              class="deal-prev bg-dark absolute left-0 top-[72px] z-10 flex h-[50px] w-[50px] translate-x-[-50%] transform items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105"
+              class="deal-prev bg-dark absolute left-0 top-[72px] z-10 flex h-[50px] w-[50px] translate-x-[-50%] transform cursor-pointer items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105"
             >
               <img
                 src="./assets/icon-chevron-left.svg"
@@ -237,7 +251,7 @@
               />
             </button>
             <button
-              class="deal-next bg-dark absolute right-0 top-[72px] z-10 flex h-[50px] w-[50px] translate-x-[50%] transform items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105"
+              class="deal-next bg-dark absolute right-0 top-[72px] z-10 flex h-[50px] w-[50px] translate-x-[50%] transform cursor-pointer items-center justify-center rounded-full shadow-lg transition-transform hover:scale-105"
             >
               <img
                 src="./assets/icon-chevron-right.svg"
@@ -249,13 +263,22 @@
             </button>
             <div class="deal-list mt-[30px] flex overflow-hidden">
               <div
-                class="deal-item w-[calc(100%+30px)] shrink-0 pr-[30px] sm:w-[calc((100%+30px)/2)] lg:w-[calc((100%+30px)/4)]"
+                class="deal-item w-[calc(100%+30px)] shrink-0 cursor-pointer pr-[30px] sm:w-[calc((100%+30px)/2)] lg:w-[calc((100%+30px)/4)]"
               >
                 <div
-                  class="deal-wrapper group relative h-[200px] rounded-[24px] bg-[url(./assets/image-deals-1.webp)] bg-cover bg-center sm:h-[350px]"
+                  class="hover:bg-105 group relative h-[200px] overflow-hidden rounded-[24px] sm:h-[350px]"
                 >
+                  <div class="absolute bottom-0 top-0 w-full">
+                    <img
+                      src="./assets/image-deals-1.webp"
+                      alt="De Fleece"
+                      aria-label="De Fleece"
+                      class="deal-image h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-125"
+                    />
+                  </div>
+
                   <div
-                    class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] p-[20px] transition-all group-hover:from-10%"
+                    class="absolute bottom-0 flex h-full w-full flex-col justify-end bg-gradient-to-b from-transparent from-[46%] to-[#050211] to-[87%] p-[20px]"
                   >
                     <div class="flex items-center justify-between">
                       <div>
@@ -452,8 +475,15 @@
               >
                 <a class="benefit-item" href="#">
                   <div
-                    class="benefit-wrapper group relative h-[200px] rounded-[24px] bg-[url(./assets/image-ben-1.webp)] bg-cover"
+                    class="benefit-wrapper group relative h-[200px] overflow-hidden rounded-[24px]"
                   >
+                    <img
+                      src="./assets/image-ben-1.webp"
+                      alt="House for Office and Living"
+                      aria-label="House for Office and Living"
+                      class="benefit-image h-full w-full object-cover transition-transform duration-700 ease-out group-hover:scale-125"
+                      loading="lazy"
+                    />
                     <div
                       class="absolute bottom-0 left-0 right-0 bg-gradient-to-b from-transparent from-30% to-[#050211] p-[20px] transition-all group-hover:from-10%"
                     >
@@ -666,7 +696,7 @@
               <div class="space-y-[12px]">
                 <span class="block font-semibold">Choose Language</span>
                 <div
-                  class="lang-wrapper relative flex inline-flex cursor-pointer items-center gap-[10px] p-2"
+                  class="lang-wrapper relative inline-flex cursor-pointer items-center gap-[10px] p-2"
                 >
                   <img
                     src="./assets/icon-flag-uk.svg"
@@ -753,6 +783,7 @@
       document.addEventListener("DOMContentLoaded", () => {
         const header = document.querySelector("header");
         const navbar = document.querySelector(".navbar");
+        const navbarContainer = navbar.parentElement;
 
         window.addEventListener("scroll", () => {
           if (window.scrollY > 0) {
@@ -796,6 +827,7 @@
           drawerMenu.classList.toggle("translate-y-0");
           drawerMenu.classList.toggle("bg-opacity-[95%]");
           drawerMenu.classList.toggle("opacity-100");
+          drawerMenu.classList.toggle("z-20");
           document.body.classList.toggle("overflow-hidden");
         });
 
@@ -808,9 +840,9 @@
         let dealWidth = dealItems[0].offsetWidth;
 
         dealPrev.addEventListener("click", () => {
-          if (dealList.scrollLeft + dealList.offsetWidth < dealList.scrollWidth)
-            dealList.scrollTo({ left: 0, behavior: "smooth" });
-          else {
+          if (dealList.scrollLeft < dealWidth) {
+            return;
+          } else {
             const scrollLeft = dealList.scrollLeft;
             dealList.scrollTo({
               left: scrollLeft - dealWidth,
@@ -878,8 +910,9 @@
               if (index === 2) line.classList.remove("-rotate-[42deg]");
             });
             drawerMenu.classList.remove("translate-y-0");
-            drawerMenu.classList.toggle("bg-opacity-[95%]");
+            drawerMenu.classList.remove("bg-opacity-[95%]");
             drawerMenu.classList.remove("opacity-100");
+            drawerMenu.classList.remove("z-20");
             document.body.classList.remove("overflow-hidden");
           }
         });
@@ -1015,8 +1048,8 @@
           dummyDeals.forEach((deal, index) => {
             const newDealItem =
               index !== 0 ? dealItem.cloneNode(true) : dealItem;
-            newDealItem.querySelector(".deal-wrapper").style.backgroundImage =
-              `url(${deal.image})`;
+            newDealItem.querySelector(".deal-image").src = deal.image;
+            newDealItem.querySelector(".deal-image").alt = deal.title;
             newDealItem.querySelector(".deal-name").textContent = deal.title;
             newDealItem.querySelector(".deal-price").textContent = deal.price;
             newDealItem.querySelector(".deal-rating").textContent = deal.rating;
@@ -1126,9 +1159,8 @@
           dummyBenefits.forEach((benefit, index) => {
             const newBenefitItem =
               index !== 0 ? benefitItem.cloneNode(true) : benefitItem;
-            newBenefitItem.querySelector(
-              ".benefit-wrapper",
-            ).style.backgroundImage = `url(${benefit.image})`;
+            newBenefitItem.querySelector(".benefit-image").src = benefit.image;
+            newBenefitItem.querySelector(".benefit-image").alt = benefit.title;
             newBenefitItem.querySelector("h3").textContent = benefit.title;
             newBenefitItem.querySelector("span").textContent = benefit.count;
             benefitList.appendChild(newBenefitItem);
