@@ -65,16 +65,18 @@
         <nav
           class="navbar bg-dark flex w-full items-center justify-between rounded-[20px] px-[30px] py-[24px] text-white"
         >
-          <div class="flex items-center gap-[10px] text-[24px] font-extrabold">
-            <img
-              src="./assets/logo-main.svg"
-              alt="Nidejia Logo"
-              aria-label="Nidejia Logo"
-              height="36"
-              width="36"
-            />
-            <span>Nidejia</span>
-          </div>
+          <a href="#hero">
+            <div class="flex items-center gap-[10px] text-[24px] font-extrabold">
+              <img
+                src="./assets/logo-main.svg"
+                alt="Nidejia Logo"
+                aria-label="Nidejia Logo"
+                height="36"
+                width="36"
+              />
+              <span>Nidejia</span>
+            </div>
+          </a>
           <ul class="hidden items-center gap-[30px] lg:flex">
             <li class="font-semibold hover:underline">
               <a href="#deals">Featured</a>
@@ -157,7 +159,7 @@
 
     <main>
       <!-- Section Hero -->
-      <section>
+      <section id="hero">
         <div class="bg-[url('./assets/hero-bg_1x.webp')] bg-cover bg-center">
           <div class="bg-gradient-to-r from-black to-transparent">
             <div class="container pb-[200px] pt-[200px]">
@@ -195,7 +197,7 @@
       </section>
 
       <!-- Section Statistics -->
-      <section>
+      <section id="stats">
         <div class="container relative pt-0">
           <div
             class="stats-list bg-dark grid w-full translate-y-[-75px] grid-cols-2 rounded-[20px] lg:grid-cols-4"
