@@ -8,7 +8,7 @@
       content="Dolor house comfortable si amet with cheap price that also lorem when you need grow."
     />
     <title>Nidejia - Glorious Living and Loving Space</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -33,35 +33,8 @@
       sizes="16x16"
       href="./assets/favicon-16x16.png"
     />
-    <link rel="manifest" href="./assets/site.webmanifest" />
-    <script>
-      tailwind.config = {
-        theme: {
-          extend: {
-            colors: {
-              brand: "#FF9357",
-              secondary: "#323437",
-              dark: "#141414",
-              dark2: "#202020",
-              steel: "#A8A8AB",
-            },
-          },
-        },
-      };
-    </script>
-    <style type="text/tailwindcss">
-      @layer base {
-        button {
-          @apply rounded-full px-[24px] py-[12px] font-semibold transition-transform hover:bg-opacity-80 active:hover:scale-95;
-        }
-      }
-
-      @layer component {
-        .container {
-          @apply mx-auto max-w-screen-lg px-[16px];
-        }
-      }
-    </style>
+    <!-- <link rel="manifest" href="./assets/site.webmanifest" /> -->
+    <link href="./dist/main.css" rel="stylesheet">
   </head>
   <body class="bg-black font-['Poppins'] text-white">
     <header
@@ -152,7 +125,7 @@
     <main>
       <!-- Section Hero -->
       <section id="hero">
-        <div class="bg-[url('./assets/hero-bg_1x.webp')] bg-cover bg-center">
+        <div class="bg-cover bg-center" style="background-image: url('./assets/hero-bg_1x.webp')">
           <div class="bg-gradient-to-r from-black to-transparent">
             <div class="container pb-[200px] pt-[200px]">
               <div class="max-w-xl">
